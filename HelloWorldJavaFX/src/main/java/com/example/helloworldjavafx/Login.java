@@ -34,8 +34,9 @@ public class Login
     public void checkLogin() throws IOException{
         Model_sqlite login_model = new Model_sqlite();
         HelloApplication n = new HelloApplication();
+        String query="select * from user_info where Username = ? and Password = ?";
         try {
-            if (login_model.is_login(Username.getText(), password.getText())) {
+            if (login_model.is_login(Username.getText(), password.getText(),query)) {
 
                 wrongLogin.setText("Login Successful!");
                 n.changeScene("afterLogin.fxml");

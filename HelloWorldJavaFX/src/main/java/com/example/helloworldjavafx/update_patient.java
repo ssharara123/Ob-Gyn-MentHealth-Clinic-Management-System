@@ -26,8 +26,24 @@ public class update_patient {
         HelloApplication q = new HelloApplication();
         q.changeScene("afterLogin.fxml");
     }
+    public void search(ActionEvent event) throws IOException
+    {
+        Model_sqlite patient_model = new Model_sqlite();
+        HelloApplication s= new HelloApplication();
+        String query="select * from Patient_info where Name = ? and PatientID = ?";
+        try {
+            if (patient_model.is_login(p_name.getText(), p_id.getText(),query)) {
+
+                s.changeScene("afterLogin.fxml");
+
+            }
+        }catch(Exception e)
+        {
+            System.out.println("Problem!");
+        }
+    }
+
+    }
 
 
 
-
-}

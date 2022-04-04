@@ -42,14 +42,7 @@ public class NewPatient
     }
 
     public void newConfirm(ActionEvent event) throws IOException {
-        /*String Pname = name.getText();
-        String DateOfBirth = DoB.getText();
-        String Psex = sex.getText();
-        String Pweight = weight.getText();
-        String BG = blood_group.getText();
-        String Med = medicine.getText();
-        String cont = contact.getText();
-        String Pid = id.getText();*/
+
         Model_sqlite model = new Model_sqlite();
         HelloApplication r = new HelloApplication();
         try {

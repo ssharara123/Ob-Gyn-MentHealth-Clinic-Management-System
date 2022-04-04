@@ -22,7 +22,7 @@ public class Model_sqlite {
             return false;
         }
     }
-    public boolean is_login(String Username,String Password)
+    public boolean is_login(String Username,String Password,String Query)
     {
         conection = sqlConnect.connector();
         if (conection == null) {
@@ -31,7 +31,6 @@ public class Model_sqlite {
         }
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
-        String Query = "select * from user_info where Username = ? and Password = ?";
 
         try {
             preparedStatement = conection.prepareStatement(Query);
