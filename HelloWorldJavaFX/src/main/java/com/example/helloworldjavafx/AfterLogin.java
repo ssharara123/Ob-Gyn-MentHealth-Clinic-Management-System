@@ -26,7 +26,7 @@ public class AfterLogin
     public void updatePatient(ActionEvent event) throws IOException
     {
         HelloApplication p = new HelloApplication();
-        p.changeScene("hello-view.fxml");
+        p.changeScene("update_patient.fxml");
     }
 
     public void userLogout(ActionEvent event) throws IOException
