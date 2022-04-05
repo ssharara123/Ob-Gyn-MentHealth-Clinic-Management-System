@@ -16,7 +16,7 @@
          <children>
             <ImageView fitHeight="400.0" fitWidth="607.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="file:/C:/Users/User/IdeaProjects/HelloWorldJavaFX/src/images/rm208-340-kwan_1.jpg" />
+                  <Image url="C:\Users\User\Desktop\Ob-Gyn-MentHealth-Clinic-Management-System\HelloWorldJavaFX\src\images\rm208-340-kwan_1.jpg" />
                </image>
             </ImageView>
             <Text layoutX="28.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Write Patient Information" wrappingWidth="229.86708068847656">
