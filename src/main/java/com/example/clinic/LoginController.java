@@ -66,7 +66,7 @@ public class LoginController
             String query = "select * from doctor_info where Username = ? and Password = ?";
             try {
                 Doctor doctor = new Doctor(Username.getText(), password.getText());
-                if (login_model.doc_login(doctor.getUsername(), doctor.getPassword(), query)) {
+                if (login_model.is_login(doctor.getUsername(), doctor.getPassword(), query)) {
 
                     //wrongLogin.setText("Login Successful!");
                     n.changeScene("doctor.fxml");

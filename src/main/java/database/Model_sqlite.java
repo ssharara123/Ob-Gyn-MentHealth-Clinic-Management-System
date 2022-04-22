@@ -71,7 +71,7 @@ public class Model_sqlite {
         }
     }
 
-    public boolean doc_login(String Username,String Password,String Query)
+    /*public boolean doc_login(String Username,String Password,String Query)
     {
         conection = sqlConnect.connector();
         if (conection == null) {
@@ -108,7 +108,9 @@ public class Model_sqlite {
                 e.printStackTrace();
             }
         }
-    }
+    } */
+
+
     public boolean information_add(String Pname, String DateOfBirth, String Psex,String Pweight,String BG,String Med,String cont,String Pid) {
         con = sqlConnect.connector();
         if (con == null) {
