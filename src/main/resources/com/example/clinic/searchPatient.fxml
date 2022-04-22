@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.clinic.searchController">
+   <children>
+      <Label layoutX="116.0" layoutY="147.0" prefHeight="18.0" prefWidth="96.0" text="Patient Name:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameField" layoutX="260.0" layoutY="144.0" promptText="Patient Name" />
+      <TextField fx:id="Idfield" layoutX="259.0" layoutY="187.0" prefHeight="26.0" prefWidth="150.0" promptText="Patient ID" />
+      <Label layoutX="116.0" layoutY="190.0" prefHeight="18.0" prefWidth="96.0" text="Patient Name:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="searchbutton" layoutX="260.0" layoutY="242.0" mnemonicParsing="false" onAction="#search" text="Search" />
+      <Button fx:id="back" layoutX="260.0" layoutY="282.0" mnemonicParsing="false" onAction="#back" text="Return" />
+   </children>
+</AnchorPane>

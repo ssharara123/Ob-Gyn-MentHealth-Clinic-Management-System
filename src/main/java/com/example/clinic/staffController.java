@@ -6,8 +6,7 @@ import javafx.scene.control.Button;
 
 import java.io.IOException;
 
-public class AfterLoginController
-{
+public class staffController {
     @FXML
     private Button logout;
 
@@ -17,21 +16,27 @@ public class AfterLoginController
     @FXML
     private Button update;
 
-    public void addPatient(ActionEvent event) throws IOException
-    {
+    @FXML
+    private Button appointment;
+
+    public void addPatient(ActionEvent event) throws IOException {
         Main o = new Main();
         o.changeScene("newPatient.fxml");
     }
 
-    public void updatePatient(ActionEvent event) throws IOException
-    {
+    public void updatePatient(ActionEvent event) throws IOException {
         Main p = new Main();
         p.changeScene("update_patient.fxml");
     }
 
-    public void userLogout(ActionEvent event) throws IOException
-    {
+    public void userLogout(ActionEvent event) throws IOException {
         Main m = new Main();
         m.changeScene("login.fxml");
     }
+
+    public void appointment(ActionEvent event) throws IOException {
+        Main n = new Main();
+        n.changeScene("appointment.fxml");
+    }
+
 }

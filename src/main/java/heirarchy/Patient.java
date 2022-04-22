@@ -13,6 +13,26 @@ public class Patient extends People{
     private String BloodGroup;
     private String Medication;
 
+
+    public Patient(String name, String Id, String Sex, String Weight, String ContactNo, String BloodGroup,String Medication )
+    {
+        setName(name);
+        this.Id = Id;
+        this.Sex = Sex;
+        this.Weight = Weight;
+        this.ContactNo = ContactNo;
+        this.BloodGroup = BloodGroup;
+        this.Medication = Medication;
+
+
+
+    }
+
+    public Patient()
+    {
+
+    }
+
     public String getSex() {
         return Sex;
     }

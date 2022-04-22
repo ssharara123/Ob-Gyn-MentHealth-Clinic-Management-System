@@ -1,8 +1,18 @@
 package database;
+import heirarchy.Patient;
+
 import java.sql.*;
 
 
 public class Model_sqlite {
+    private static final Model_sqlite instance = new Model_sqlite();
+    public static Model_sqlite getInstance()
+    {
+        return instance;
+
+    }
+    private Patient patient;
+
     public static Connection conection;
     public static Connection con;
     public Model_sqlite () {
@@ -23,6 +33,45 @@ public class Model_sqlite {
         }
     }
     public boolean is_login(String Username,String Password,String Query)
+    {
+        conection = sqlConnect.connector();
+        if (conection == null) {
+            System.out.println("connection not successful");
+            System.exit(1);
+        }
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        try {
+            preparedStatement = conection.prepareStatement(Query);
+            preparedStatement.setString(1,Username);
+            preparedStatement.setString(2,Password);
+            resultSet = preparedStatement.executeQuery();
+            if(resultSet.next())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+        finally {
+            try {
+                preparedStatement.close();
+                resultSet.close();
+            }
+            catch (SQLException e)
+            {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public boolean doc_login(String Username,String Password,String Query)
     {
         conection = sqlConnect.connector();
         if (conection == null) {
@@ -165,5 +214,47 @@ public class Model_sqlite {
         rs.close();*/
         String dob = "04/10/1986";
         return  dob;
+    }
+    public Patient getPatient()
+    {
+        return this.patient;
+    }
+    public boolean searchPatient(String patientName, String patientID)
+    {
+        con = sqlConnect.connector();
+        if (con == null) {
+            System.out.println("connection not successful");
+            System.exit(1);
+        }
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        String Query = "SELECT * FROM Patient_info WHERE Name = ? and PatientID = ?";
+        try{
+            preparedStatement = con.prepareStatement(Query);
+            preparedStatement.setString(1, patientName);
+            preparedStatement.setString(2, patientID);
+            resultSet = preparedStatement.executeQuery();
+            if(resultSet.next())
+            {
+                patient = new Patient(resultSet.getString("Name"), resultSet.getString("PatientID"),
+                        resultSet.getString("Sex"), resultSet.getString("Weight"),
+                        resultSet.getString("Contact"), resultSet.getString("BloodGroup"), resultSet.getString("Medication"));
+
+                        return true;
+
+            }
+
+            else
+            {return false;}
+
+
+        }
+        catch(SQLException e)
+        {
+            e.printStackTrace();
+            return false;
+        }
+
+
     }
 }

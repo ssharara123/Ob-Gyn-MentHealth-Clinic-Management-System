@@ -7,11 +7,11 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.clinic.AfterLoginController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.clinic.staffController">
    <top>
       <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #D4D0D1;" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="413.0" fitWidth="614.0" layoutX="-74.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="appointment" fitHeight="413.0" fitWidth="607.0" layoutX="-67.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="file:/C:/Users/User/IdeaProjects/HelloWorldJavaFX/src/images/pexels-negative-space-48604.png" />
                </image>
@@ -27,6 +27,11 @@
                </font>
             </Button>
             <Button fx:id="update" layoutX="416.0" layoutY="135.0" mnemonicParsing="false" onAction="#updatePatient" opacity="0.64" prefHeight="42.0" prefWidth="146.0" style="-fx-background-color: #0137B5;" text="Update Patient Profile" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="update1" layoutX="416.0" layoutY="209.0" mnemonicParsing="false" onAction="#updatePatient" onDragDetected="#appointment" opacity="0.64" prefHeight="42.0" prefWidth="146.0" style="-fx-background-color: #0137B5;" text="Create Appointment" textFill="WHITE">
                <font>
                   <Font name="Arial Rounded MT Bold" size="12.0" />
                </font>

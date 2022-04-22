@@ -14,7 +14,7 @@ public class Info_addedController {
     private Label add_info;
     public void go_back(ActionEvent event) throws IOException
     {
-        Main t=new Main();
+        Main t = new Main();
         t.changeScene("afterLogin.fxml");
     }
 
