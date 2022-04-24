@@ -1,5 +1,5 @@
 package database;
-import heirarchy.Patient;
+import Model.Patient;
 
 import java.sql.*;
 

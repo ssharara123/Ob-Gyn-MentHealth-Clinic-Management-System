@@ -1,4 +1,4 @@
-package heirarchy;
+package Model;
 
 public abstract class People{
     private String Name;

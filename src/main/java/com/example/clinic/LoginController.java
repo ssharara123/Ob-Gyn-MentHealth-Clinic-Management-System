@@ -1,16 +1,12 @@
 package com.example.clinic;
-import heirarchy.Doctor;
-import heirarchy.Staff;
-import heirarchy.User;
+import Model.Doctor;
+import Model.Staff;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.control.*;
-import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 
 import java.io.IOException;
-import java.sql.*;
+
 import database.Model_sqlite;
 
 public class LoginController

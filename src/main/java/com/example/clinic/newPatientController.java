@@ -1,17 +1,13 @@
 package com.example.clinic;
 
 import database.Model_sqlite;
-import heirarchy.Patient;
+import Model.Patient;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import org.w3c.dom.Text;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 
 public class newPatientController
 {

@@ -10,8 +10,11 @@ import java.io.IOException;
 public class doctorController {
     @FXML
     private Button view;
+    @FXML;
     private Button check;
+    @FXML;
     private Button update;
+    @FXML;
     private Button back;
 
 

@@ -1,6 +1,4 @@
-package heirarchy;
-
-import java.sql.SQLException;
+package Model;
 
 public abstract class User extends People {
     private String Username;

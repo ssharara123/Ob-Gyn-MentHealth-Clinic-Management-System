@@ -4,6 +4,7 @@ import database.Model_sqlite;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
@@ -16,13 +17,16 @@ public class searchController {
     private TextField nameField;
     @FXML
     private TextField Idfield;
+    @FXML
+    private Label wrongInfo;
 
     @FXML
     private Button back;
 
     public void search(ActionEvent e) {
+        Main q = new Main();
         if (Model_sqlite.getInstance().searchPatient(nameField.getText(), Idfield.getText())) {
-            Main q = new Main();
+
             try {
                 q.changeScene("ViewPatient.fxml");
 
@@ -31,6 +35,11 @@ public class searchController {
             }
 
         }
+        else
+        {
+            wrongInfo.setText("Wrong Information");
+        }
+
     }
 
     public void back(ActionEvent event) throws IOException

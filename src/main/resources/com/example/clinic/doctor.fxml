@@ -7,37 +7,32 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="384.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.clinic.doctorController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="384.0" prefWidth="600.0" style="-fx-background-color: #D4D0D1;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.clinic.doctorController">
    <children>
-      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="370.0" fitWidth="591.0" layoutX="-13.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="C:\Users\User\Desktop\copy\src\images\pexels-negative-space-48604.png" />
+            <Image url="@../../../../../images/pexels-negative-space-48604.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="110.0" fitWidth="109.0" layoutX="456.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../images/pngtree-vector-doctor-icon-png-image_3989833.jpg" />
-         </image>
-      </ImageView>
-      <Button fx:id="back" layoutX="269.0" layoutY="289.0" mnemonicParsing="false" onAction="#logout" opacity="0.85" prefHeight="40.0" prefWidth="59.0" style="-fx-background-color: #0137B5;" text="Log Out" textFill="WHITE" />
-      <Button fx:id="view" alignment="CENTER" layoutX="221.0" layoutY="125.0" mnemonicParsing="false" onAction="#view" opacity="0.85" prefHeight="40.0" prefWidth="154.0" style="-fx-background-color: #0137B5;" text="View Patient Profile" textFill="WHITE">
+      <Button fx:id="back" layoutX="451.0" layoutY="295.0" mnemonicParsing="false" onAction="#logout" opacity="0.65" prefHeight="40.0" prefWidth="59.0" style="-fx-background-color: #0137B5;" text="Log Out" textFill="WHITE" />
+      <Button fx:id="view" alignment="CENTER" layoutX="404.0" layoutY="91.0" mnemonicParsing="false" onAction="#view" opacity="0.65" prefHeight="40.0" prefWidth="154.0" style="-fx-background-color: #0137B5;" text="View Patient Profile" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="12.0" />
          </font>
       </Button>
-      <Button alignment="CENTER" layoutX="221.0" layoutY="230.0" mnemonicParsing="false" opacity="0.85" prefHeight="40.0" prefWidth="154.0" style="-fx-background-color: #0137B5;" text="Check Appointments" textFill="WHITE">
+      <Button alignment="CENTER" layoutX="404.0" layoutY="213.0" mnemonicParsing="false" opacity="0.65" prefHeight="40.0" prefWidth="154.0" style="-fx-background-color: #0137B5;" text="Check Appointments" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="update" alignment="CENTER" layoutX="221.0" layoutY="180.0" mnemonicParsing="false" onAction="#update" opacity="0.85" prefHeight="40.0" prefWidth="154.0" style="-fx-background-color: #0137B5;" text="Update Patient Profile" textFill="WHITE">
+      <Button fx:id="update" alignment="CENTER" layoutX="404.0" layoutY="152.0" mnemonicParsing="false" onAction="#update" opacity="0.65" prefHeight="40.0" prefWidth="154.0" style="-fx-background-color: #0137B5;" text="Update Patient Profile" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="12.0" />
          </font>
       </Button>
-      <Label alignment="CENTER" layoutY="40.0" prefHeight="50.0" prefWidth="600.0" text="Welcome, Doctor!" textAlignment="CENTER">
+      <Label layoutX="398.0" layoutY="14.0" prefHeight="75.0" prefWidth="161.0" text="Welcome, Doctor!" textFill="#000000d4">
          <font>
-            <Font size="18.0" />
+            <Font name="Arial Rounded MT Bold" size="18.0" />
          </font>
       </Label>
    </children>

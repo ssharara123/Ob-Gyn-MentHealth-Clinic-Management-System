@@ -1,4 +1,4 @@
-package heirarchy;
+package Model;
 
 import database.Model_sqlite;
 
