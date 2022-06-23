@@ -26,7 +26,7 @@ public class staffController {
 
     public void updatePatient(ActionEvent event) throws IOException {
         Main p = new Main();
-        p.changeScene("update_patient.fxml");
+        p.changeScene("searchPatient.fxml");
     }
 
     public void userLogout(ActionEvent event) throws IOException {

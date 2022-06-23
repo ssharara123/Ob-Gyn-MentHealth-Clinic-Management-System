@@ -19,15 +19,16 @@ public class searchController {
     private TextField Idfield;
     @FXML
     private Label wrongInfo;
-
     @FXML
     private Button back;
 
     public void search(ActionEvent e) {
         Main q = new Main();
+
         if (Model_sqlite.getInstance().searchPatient(nameField.getText(), Idfield.getText())) {
 
-            try {
+            try
+            {
                 q.changeScene("ViewPatient.fxml");
 
             } catch (IOException ex) {
@@ -45,7 +46,13 @@ public class searchController {
     public void back(ActionEvent event) throws IOException
     {
         Main k = new Main();
-        k.changeScene("doctor.fxml");
+        LoginController x = new LoginController();
+
+       if(Model_sqlite.getInstance().get_type().equals("Staff"))
+       { k.changeScene("afterLogin.fxml");}
+
+        else if(Model_sqlite.getInstance().get_type().equals("Doctor"))
+        { k.changeScene("doctor.fxml");}
     }
 }
 

@@ -11,6 +11,7 @@ import database.Model_sqlite;
 
 public class LoginController
 {
+    public int check;
     public LoginController()
     {
     }
@@ -47,6 +48,10 @@ public class LoginController
                 if (login_model.is_login(staff.getUsername(), staff.getPassword(), query)) {
 
                     //wrongLogin.setText("Login Successful!");
+                   check = 1;
+                    Model_sqlite.getInstance().set_type("Staff");
+                   Model_sqlite.getInstance().set_staff(staff);
+
                     n.changeScene("afterLogin.fxml");
 
 
@@ -63,7 +68,9 @@ public class LoginController
             try {
                 Doctor doctor = new Doctor(Username.getText(), password.getText());
                 if (login_model.is_login(doctor.getUsername(), doctor.getPassword(), query)) {
-
+                    check = 2;
+                    Model_sqlite.getInstance().set_type("Doctor");
+                    Model_sqlite.getInstance().set_doctor(doctor);
                     //wrongLogin.setText("Login Successful!");
                     n.changeScene("doctor.fxml");
 
@@ -81,6 +88,15 @@ public class LoginController
             wrongLogin.setText("Choose your division");
         }
 
+
         }
+
+       public int get_x()
+       {
+           System.out.println(check);
+           return check;
+
+       }
+
     }
 

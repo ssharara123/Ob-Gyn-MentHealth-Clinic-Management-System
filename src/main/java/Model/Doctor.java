@@ -8,6 +8,7 @@ public class Doctor extends User{
     private String Department;   //OB-Gyn or MentalHealth
     private String Degree;
     private int VisitFee;
+    public boolean check;
 
     public String getDepartment() {
         return Department;

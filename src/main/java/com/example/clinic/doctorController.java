@@ -10,12 +10,12 @@ import java.io.IOException;
 public class doctorController {
     @FXML
     private Button view;
-    @FXML;
+    @FXML
     private Button check;
-    @FXML;
-    private Button update;
-    @FXML;
+    @FXML
     private Button back;
+    @FXML
+    private Button update;
 
 
     public void view(ActionEvent event) throws IOException

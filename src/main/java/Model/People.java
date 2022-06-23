@@ -4,6 +4,7 @@ public abstract class People{
     private String Name;
     private String DateOfBirth;
     private String type;
+  //    private String ContactNo;
 
     public String getType() {
         return type;

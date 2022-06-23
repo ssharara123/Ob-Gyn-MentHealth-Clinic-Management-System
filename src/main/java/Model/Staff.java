@@ -5,6 +5,8 @@ import database.Model_sqlite;
 import java.sql.SQLException;
 
 public class Staff extends User{
+
+    public boolean check;
     public Staff (String username, String password) throws SQLException {
         super.setType("STAFF");
         super.setUsername(username);

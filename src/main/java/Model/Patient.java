@@ -12,6 +12,8 @@ public class Patient extends People{
     private String ContactNo;
     private String BloodGroup;
     private String Medication;
+    private String Diagnosis;
+    private String Symptoms;
 
 
     public Patient(String name, String Id, String Sex, String Weight, String ContactNo, String BloodGroup,String Medication )
@@ -23,6 +25,9 @@ public class Patient extends People{
         this.ContactNo = ContactNo;
         this.BloodGroup = BloodGroup;
         this.Medication = Medication;
+        this.Diagnosis = Diagnosis;
+        this.Symptoms = Symptoms;
+
 
 
 

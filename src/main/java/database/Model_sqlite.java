@@ -1,5 +1,7 @@
 package database;
+import Model.Doctor;
 import Model.Patient;
+import Model.Staff;
 
 import java.sql.*;
 
@@ -12,9 +14,47 @@ public class Model_sqlite {
 
     }
     private Patient patient;
+    private Doctor doctor;
+    private Staff staff;
+    private String type;
+
 
     public static Connection conection;
     public static Connection con;
+
+    public Doctor get_doctor()
+    {
+        return doctor;
+    }
+    public Staff get_staff()
+    {
+        return staff;
+    }
+
+    public String get_type()
+    {
+        return type;
+    }
+    public void set_type(String type)
+    {
+       this.type = type;
+    }
+    public void set_doctor(Doctor doctor)
+    {
+       // this.doctor.setUsername(doctor.getUsername());
+       // this.doctor.setPassword(doctor.getPassword());
+        this.doctor = doctor;
+
+
+    }
+    public void set_staff(Staff staff)
+    {
+       // this.staff.setUsername(staff.getUsername());
+       // this.staff.setPassword(staff.getPassword());
+        this.staff = staff;
+
+
+    }
     public Model_sqlite () {
         conection = sqlConnect.connector();
         if (conection == null) {
