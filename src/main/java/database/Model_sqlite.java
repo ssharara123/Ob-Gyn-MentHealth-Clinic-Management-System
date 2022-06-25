@@ -207,7 +207,7 @@ public class Model_sqlite {
             pst.setString(5, BG);
             pst.setString(6, Med);
             pst.setString(7, cont);
-            pst.setString(8,"11");
+            pst.setString(8,Pid);
             System.out.println("line 2");
 
             int status = pst.executeUpdate();
