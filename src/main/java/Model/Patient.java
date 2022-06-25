@@ -1,7 +1,5 @@
 package Model;
 
-import database.Model_sqlite;
-
 import java.sql.SQLException;
 
 public class Patient extends People{
@@ -14,9 +12,10 @@ public class Patient extends People{
     private String Medication;
     private String Diagnosis;
     private String Symptoms;
+    private String History;
 
 
-    public Patient(String name, String dateOfBirth,String Id, String Sex, String Weight, String ContactNo, String BloodGroup,String Medication )
+    public Patient(String name, String dateOfBirth,String Id, String Sex, String Weight, String ContactNo, String BloodGroup,String Medication, String Symptoms, String History)
     {
         setName(name);
         this.Id = Id;
@@ -28,6 +27,7 @@ public class Patient extends People{
         this.Medication = Medication;
         this.Diagnosis = Diagnosis;
         this.Symptoms = Symptoms;
+        this.History = History;
 
 
 
@@ -78,6 +78,13 @@ public class Patient extends People{
     public void setMedication(String medication) {
         Medication = medication;
     }
+    public String getSymptoms(){return Symptoms;}
+    public void setSymptoms(String symptoms) {   System.out.println(symptoms);  Symptoms = symptoms; System.out.println(symptoms);}
+    public String getHistory(){ return History; }
+    public void setHistory(String history){ History = history;}
+
+
+
 
     public Patient (String id) throws SQLException {
         super.setType("PATIENT");
