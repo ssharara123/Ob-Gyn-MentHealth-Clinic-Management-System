@@ -185,6 +185,74 @@ public class Model_sqlite {
 
         }
     }
+    public boolean information_update(String Pname, String DateOfBirth, String Psex,String Pweight,String BG,String Med,String cont,String Pid) {
+        try {
+            con.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+       con = sqlConnect.connector();
+        if (con == null) {
+            System.out.println("connection not successful");
+            System.exit(1);
+        }
+        PreparedStatement pst;
+        try {
+            System.out.println("Line 1");
+            pst = con.prepareStatement("UPDATE Patient_info SET Name=?,BirthDate=?,Sex=?,Weight=?,BloodGroup=?,Medication=?,Contact=? WHERE PatientID=?");
+            pst.setString(1, Pname);
+            pst.setString(2, DateOfBirth);
+            pst.setString(3, Psex);
+            pst.setString(4,Pweight);
+            pst.setString(5, BG);
+            pst.setString(6, Med);
+            pst.setString(7, cont);
+            pst.setString(8,"11");
+            System.out.println("line 2");
+
+            int status = pst.executeUpdate();
+            if (status == 1)
+            {
+                return true;
+            }
+            else
+            {
+                System.out.println("line 3");
+                return false;
+            }
+        } catch (SQLException e) {
+
+            //e.printStackTrace();
+            System.out.println("SQL Exception Found");
+            System.out.println(e.getMessage());
+            return false;
+
+        }
+        catch(Exception e)
+        {
+            System.out.println("Normal Exception Found");
+            System.out.println(e.getMessage());
+            return false;
+        }
+        finally
+        {
+            try {
+                //pst.close();
+                con.close();
+                //System.out.println("Yes in update database");
+            }
+            catch (SQLException e) {
+                e.printStackTrace();
+            }
+            catch (NullPointerException e) {
+                System.out.println(e);
+            }
+            catch(Exception e) {
+                System.out.println(e);
+            }
+        }
+    }
+
 
     public static String getNameForStaff(String username) throws SQLException {
         /*ResultSet rs = null;
@@ -278,7 +346,7 @@ public class Model_sqlite {
             resultSet = preparedStatement.executeQuery();
             if(resultSet.next())
             {
-                patient = new Patient(resultSet.getString("Name"), resultSet.getString("PatientID"),
+                patient = new Patient(resultSet.getString("Name"), resultSet.getString("BirthDate"),resultSet.getString("PatientID"),
                         resultSet.getString("Sex"), resultSet.getString("Weight"),
                         resultSet.getString("Contact"), resultSet.getString("BloodGroup"), resultSet.getString("Medication"));
 

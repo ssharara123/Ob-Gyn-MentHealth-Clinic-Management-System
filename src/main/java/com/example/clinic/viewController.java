@@ -1,5 +1,6 @@
 package com.example.clinic;
 
+import Model.Patient;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -15,9 +16,8 @@ import java.util.ResourceBundle;
 public class viewController implements Initializable {
         @FXML
         private Button back;
-
         @FXML
-        private Button confirm;
+        private Button update;
         @FXML
         private TextField name;
         @FXML
@@ -48,6 +48,7 @@ public class viewController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
         name.setText(Model_sqlite.getInstance().getPatient().getName());
+        DoB.setText(Model_sqlite.getInstance().getPatient().getDateOfBirth());
         sex.setText(Model_sqlite.getInstance().getPatient().getSex());
         weight.setText(Model_sqlite.getInstance().getPatient().getWeight());
         blood_group.setText(Model_sqlite.getInstance().getPatient().getBloodGroup());
@@ -56,9 +57,26 @@ public class viewController implements Initializable {
         id.setText(Model_sqlite.getInstance().getPatient().getId());
 
 
+    }
+    public void Update(ActionEvent event) throws IOException {
 
-
-
-
+        Model_sqlite model = new Model_sqlite();
+        //Main r = new Main();
+        try {
+            Patient patient=new Patient(id.getText());
+            patient.setName(name.getText());
+            patient.setBloodGroup(blood_group.getText());
+            patient.setContactNo(contact.getText());
+            patient.setSex(sex.getText());
+            patient.setWeight(weight.getText());
+            patient.setDateOfBirth(DoB.getText());
+            patient.setMedication(medicine.getText());
+            if (model.information_update(patient.getName(),patient.getDateOfBirth(),patient.getSex(),patient.getWeight(),patient.getBloodGroup(),patient.getMedication(),patient.getContactNo(),patient.getId())) {
+                System.out.println("Updated");
+            }
+        }catch(Exception e)
+        {
+            System.out.println("Problem in update!");
+        }
     }
 }

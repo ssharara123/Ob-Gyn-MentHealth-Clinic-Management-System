@@ -16,10 +16,11 @@ public class Patient extends People{
     private String Symptoms;
 
 
-    public Patient(String name, String Id, String Sex, String Weight, String ContactNo, String BloodGroup,String Medication )
+    public Patient(String name, String dateOfBirth,String Id, String Sex, String Weight, String ContactNo, String BloodGroup,String Medication )
     {
         setName(name);
         this.Id = Id;
+        super.setDateOfBirth(dateOfBirth);
         this.Sex = Sex;
         this.Weight = Weight;
         this.ContactNo = ContactNo;
@@ -86,10 +87,12 @@ public class Patient extends People{
         Id = id;
     }
 
+
+
     public Patient (String id) throws SQLException {
         super.setType("PATIENT");
         Model_sqlite x = new Model_sqlite();
-        //this.Id = id;
+        this.Id = id;
         super.setName(Model_sqlite.getNameForPatient(id));
         super.setDateOfBirth(Model_sqlite.getDobForPatient(id));
     }
