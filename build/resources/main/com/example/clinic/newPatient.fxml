@@ -82,7 +82,7 @@
             <TextField fx:id="medicine" layoutX="166.0" layoutY="251.0" prefHeight="26.0" prefWidth="269.0" promptText="Names of medications" />
             <TextField fx:id="contact" layoutX="105.0" layoutY="296.0" prefHeight="26.0" prefWidth="168.0" promptText="01xxxxxxxxx" />
             <TextField fx:id="id" layoutX="105.0" layoutY="339.0" prefHeight="26.0" prefWidth="168.0" />
-            <Button fx:id="confirm" layoutX="463.0" layoutY="329.0" mnemonicParsing="false" onAction="#newConfirm" opacity="0.68" prefHeight="45.0" prefWidth="107.0" style="-fx-background-color: #0137B5;" text="Confirm" textFill="WHITE">
+            <Button fx:id="confirm" layoutX="462.0" layoutY="329.0" mnemonicParsing="false" onAction="#newConfirm" opacity="0.68" prefHeight="45.0" prefWidth="107.0" style="-fx-background-color: #0137B5;" text="Confirm" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
@@ -92,6 +92,11 @@
                   <Font size="15.0" />
                </font>
             </Button>
+            <Label fx:id="info_added" layoutX="462.0" layoutY="277.0" prefHeight="38.0" prefWidth="118.0">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </center>

@@ -5,6 +5,7 @@ import Model.Patient;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
@@ -32,6 +33,8 @@ public class newPatientController
     private TextField contact;
     @FXML
     private TextField id;
+    @FXML
+    private Label info_added;
 
     public void goBack(ActionEvent event) throws IOException
     {
@@ -53,7 +56,7 @@ public class newPatientController
             patient.setDateOfBirth(DoB.getText());
             patient.setMedication(medicine.getText());
             if (model.information_add(patient.getName(),patient.getDateOfBirth(),patient.getSex(),patient.getWeight(),patient.getBloodGroup(),patient.getMedication(),patient.getContactNo(),patient.getId())) {
-                System.out.println("added");
+                info_added.setText("Information Added!");
             }
         }catch(Exception e)
         {
