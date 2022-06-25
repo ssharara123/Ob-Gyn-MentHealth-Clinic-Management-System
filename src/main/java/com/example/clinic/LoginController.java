@@ -4,9 +4,7 @@ import Model.Staff;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
-
 import java.io.IOException;
-
 import database.Model_sqlite;
 
 public class LoginController

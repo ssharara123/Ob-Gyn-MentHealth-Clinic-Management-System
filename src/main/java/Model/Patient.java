@@ -91,8 +91,8 @@ public class Patient extends People{
 
     public Patient (String id) throws SQLException {
         super.setType("PATIENT");
-        Model_sqlite x = new Model_sqlite();
-        this.Id = id;
+       Model_sqlite x = new Model_sqlite();
+       // this.Id = id;
         super.setName(Model_sqlite.getNameForPatient(id));
         super.setDateOfBirth(Model_sqlite.getDobForPatient(id));
     }
