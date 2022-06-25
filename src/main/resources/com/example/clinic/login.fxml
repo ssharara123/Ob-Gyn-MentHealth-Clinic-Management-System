@@ -23,11 +23,6 @@
     </left>
     <right>
         <AnchorPane prefHeight="400.0" prefWidth="304.0" BorderPane.alignment="CENTER">
-            <Label fx:id="wrongLogin" alignment="CENTER" layoutX="27.0" layoutY="324.0" prefHeight="22.0" prefWidth="245.0" textAlignment="CENTER" textFill="#fc0505">
-                <font>
-                    <Font size="15.0" />
-                </font>
-            </Label>
             <Text fill="WHITE" layoutX="63.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter user name and password to login" textAlignment="CENTER" wrappingWidth="172.2621078491211">
                 <font>
                     <Font name="Arial" size="14.0" />
@@ -45,7 +40,7 @@
             </Label>
             <TextField fx:id="Username" layoutX="108.0" layoutY="151.0" promptText="Username" />
             <PasswordField fx:id="password" layoutX="108.0" layoutY="211.0" promptText="Password" />
-            <Button fx:id="login_button" layoutX="210.0" layoutY="267.0" mnemonicParsing="false" onAction="#userLogin" style="-fx-background-color: #0A1845;" text="Login" textFill="WHITE">
+            <Button fx:id="login_button" layoutX="210.0" layoutY="267.0" mnemonicParsing="false" onAction="#userLogin" prefHeight="27.0" prefWidth="55.0" style="-fx-background-color: #0A1845;" text="Login" textFill="WHITE">
                 <font>
                     <Font size="13.0" />
                 </font>
@@ -63,6 +58,11 @@
                <Font name="System Bold" size="12.0" />
             </font>
          </RadioButton>
+         <Button fx:id="back" layoutX="210.0" layoutY="302.0" mnemonicParsing="false" onAction="#Return" style="-fx-background-color: #0A1845;" text="Return" textFill="WHITE">
+            <font>
+               <Font size="13.0" />
+            </font>
+         </Button>
         </AnchorPane>
     </right>
 </BorderPane>

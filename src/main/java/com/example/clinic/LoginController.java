@@ -26,6 +26,9 @@ public class LoginController
     @FXML
     private RadioButton staff;
 
+    @FXML
+    private Button back;
+
 
 
     public void userLogin(ActionEvent event) throws IOException
@@ -95,6 +98,12 @@ public class LoginController
            return check;
 
        }
+
+    public void Return (ActionEvent event) throws IOException
+    {
+        Main q = new Main();
+        q.changeScene("welcome.fxml");
+    }
 
     }
 

@@ -17,7 +17,7 @@ public class Main extends Application
     {
         stg = stage;
         stage.setResizable(false);
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("login.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("welcome.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
         stage.setTitle("OB/Gyn and MentalHealthcare Consultancy");
         stage.setScene(scene);
