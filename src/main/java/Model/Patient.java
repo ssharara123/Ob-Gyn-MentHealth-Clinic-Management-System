@@ -79,23 +79,27 @@ public class Patient extends People{
         Medication = medication;
     }
 
+    public Patient (String id) throws SQLException {
+        super.setType("PATIENT");
+        //Model_sqlite x = new Model_sqlite();
+        //this.Id = id;
+        //System.out.println(id);
+       // super.setName(Model_sqlite.getNameForPatient(id));
+       // super.setDateOfBirth(Model_sqlite.getDobForPatient(id));
+    }
     public String getId() {
+        //System.out.println("abc");
         return Id;
     }
 
     public void setId(String id) {
+
         Id = id;
     }
 
 
 
-    public Patient (String id) throws SQLException {
-        super.setType("PATIENT");
-        Model_sqlite x = new Model_sqlite();
-        this.Id = id;
-        super.setName(Model_sqlite.getNameForPatient(id));
-        super.setDateOfBirth(Model_sqlite.getDobForPatient(id));
-    }
+
 }
 
 

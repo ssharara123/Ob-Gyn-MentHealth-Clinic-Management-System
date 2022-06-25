@@ -53,7 +53,7 @@ public class newPatientController
             patient.setDateOfBirth(DoB.getText());
             patient.setMedication(medicine.getText());
             if (model.information_add(patient.getName(),patient.getDateOfBirth(),patient.getSex(),patient.getWeight(),patient.getBloodGroup(),patient.getMedication(),patient.getContactNo(),patient.getId())) {
-                r.changeScene("info_added.fxml");
+                System.out.println("added");
             }
         }catch(Exception e)
         {
