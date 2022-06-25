@@ -63,7 +63,7 @@ public class viewController implements Initializable {
         Model_sqlite model = new Model_sqlite();
         //Main r = new Main();
         try {
-            Patient patient=new Patient(id.getText());
+            Patient patient=new Patient();
             patient.setName(name.getText());
             patient.setBloodGroup(blood_group.getText());
             patient.setContactNo(contact.getText());
@@ -71,6 +71,7 @@ public class viewController implements Initializable {
             patient.setWeight(weight.getText());
             patient.setDateOfBirth(DoB.getText());
             patient.setMedication(medicine.getText());
+            patient.setId(id.getText());
             if (model.information_update(patient.getName(),patient.getDateOfBirth(),patient.getSex(),patient.getWeight(),patient.getBloodGroup(),patient.getMedication(),patient.getContactNo(),patient.getId())) {
                 System.out.println("Updated");
             }
