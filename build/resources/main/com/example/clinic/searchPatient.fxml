@@ -35,6 +35,5 @@
             <Font name="Arial Rounded MT Bold" size="12.0" />
          </font>
       </Button>
-      <Label prefHeight="207.0" prefWidth="245.0" text="FUCINKDNKLSD" />
    </children>
 </AnchorPane>

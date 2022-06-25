@@ -4,6 +4,7 @@ import Model.Patient;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import database.Model_sqlite;
 import javafx.event.ActionEvent;
@@ -34,6 +35,8 @@ public class viewController implements Initializable {
         private TextField contact;
         @FXML
         private TextField id;
+        @FXML
+        private Label updateLabel;
 
 
     public void goBack(ActionEvent event) throws IOException
@@ -72,8 +75,8 @@ public class viewController implements Initializable {
             patient.setDateOfBirth(DoB.getText());
             patient.setMedication(medicine.getText());
             patient.setId(id.getText());
-            if (model.information_update(patient.getName(),patient.getDateOfBirth(),patient.getSex(),patient.getWeight(),patient.getBloodGroup(),patient.getMedication(),patient.getContactNo(),patient.getId())) {
-                System.out.println("Updated");
+            if (model.information_update(patient.getName(),patient.getDateOfBirth(),patient.getSex(),patient.getWeight(),patient.getBloodGroup(),patient.getMedication(),patient.getContactNo(),patient.getId(), patient.getSymptoms(), patient.getHistory())) {
+                updateLabel.setText("Update Successful!");
             }
         }catch(Exception e)
         {

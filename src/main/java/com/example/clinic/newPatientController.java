@@ -35,6 +35,11 @@ public class newPatientController
     private TextField id;
     @FXML
     private Label info_added;
+    @FXML
+    private TextField history;
+    @FXML
+    private TextField symptoms;
+
 
     public void goBack(ActionEvent event) throws IOException
     {
@@ -55,8 +60,15 @@ public class newPatientController
             patient.setWeight(weight.getText());
             patient.setDateOfBirth(DoB.getText());
             patient.setMedication(medicine.getText());
-            if (model.information_add(patient.getName(),patient.getDateOfBirth(),patient.getSex(),patient.getWeight(),patient.getBloodGroup(),patient.getMedication(),patient.getContactNo(),patient.getId())) {
+            System.out.println(symptoms.getText());
+            patient.setSymptoms(symptoms.getText());
+            patient.setHistory(history.getText());
+            System.out.println("fckjsbsncbs");
+
+            if (model.information_add(patient.getName(),patient.getDateOfBirth(),patient.getSex(),patient.getWeight(),patient.getBloodGroup(),patient.getMedication(),patient.getContactNo(),patient.getId(), patient.getSymptoms(), patient.getHistory())) {
+                System.out.println("fckjsbsncbs");
                 info_added.setText("Information Added!");
+
             }
         }catch(Exception e)
         {

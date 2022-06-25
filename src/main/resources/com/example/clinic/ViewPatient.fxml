@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -83,20 +82,21 @@
             <TextField fx:id="medicine" layoutX="166.0" layoutY="251.0" prefHeight="26.0" prefWidth="269.0" promptText="Names of medications" />
             <TextField fx:id="contact" layoutX="105.0" layoutY="296.0" prefHeight="26.0" prefWidth="168.0" promptText="01xxxxxxxxx" />
             <TextField fx:id="id" layoutX="105.0" layoutY="339.0" prefHeight="26.0" prefWidth="168.0" />
-            <Button fx:id="back" layoutX="479.0" layoutY="319.0" mnemonicParsing="false" onAction="#goBack" opacity="0.68" prefHeight="47.0" prefWidth="90.0" style="-fx-background-color: #0137B5;" text="Go Back" textFill="WHITE">
+            <Button fx:id="back" layoutX="487.0" layoutY="43.0" mnemonicParsing="false" onAction="#goBack" opacity="0.68" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: #0137B5;" text="Go Back" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <ButtonBar layoutX="368.0" layoutY="250.0" prefHeight="60.0" prefWidth="201.0">
-               <buttons>
-                  <ButtonBar prefHeight="40.0" prefWidth="200.0">
-                    <buttons>
-                      <Button fx:id="update" mnemonicParsing="false" onAction="#Update" prefHeight="41.0" text="Update" />
-                    </buttons>
-                  </ButtonBar>
-               </buttons>
-            </ButtonBar>
+            <Button fx:id="update" layoutX="487.0" layoutY="334.0" mnemonicParsing="false" onAction="#Update" opacity="0.68" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: #0137B5;" text="Update" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label fx:id="updateLabel" layoutX="435.0" layoutY="287.0" prefHeight="30.0" prefWidth="167.0">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </center>

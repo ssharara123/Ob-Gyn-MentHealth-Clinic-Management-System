@@ -151,7 +151,7 @@ public class Model_sqlite {
     } */
 
 
-    public boolean information_add(String Pname, String DateOfBirth, String Psex,String Pweight,String BG,String Med,String cont,String Pid) {
+    public boolean information_add(String Pname, String DateOfBirth, String Psex,String Pweight,String BG,String Med,String cont,String Pid,String history, String symp) {
         con = sqlConnect.connector();
         if (con == null) {
             System.out.println("connection not successful");
@@ -159,7 +159,7 @@ public class Model_sqlite {
         }
         PreparedStatement pst;
         try {
-            pst = con.prepareStatement("insert into Patient_info(Name,BirthDate,Sex,Weight,BloodGroup,Medication,Contact,PatientID) values(?,?,?,?,?,?,?,?)");
+            pst = con.prepareStatement("insert into Patient_info(Name,BirthDate,Sex,Weight,BloodGroup,Medication,Contact,PatientID,MedicalHistory, Symptoms) values(?,?,?,?,?,?,?,?,?,?)");
             pst.setString(1, Pname);
             pst.setString(2, DateOfBirth);
             pst.setString(3, Psex);
@@ -168,6 +168,9 @@ public class Model_sqlite {
             pst.setString(6, Med);
             pst.setString(7, cont);
             pst.setString(8,Pid);
+            pst.setString(9, history);
+            pst.setString(10, symp);
+
             int status = pst.executeUpdate();
             if (status == 1)
             {
@@ -185,7 +188,7 @@ public class Model_sqlite {
 
         }
     }
-    public boolean information_update(String Pname, String DateOfBirth, String Psex,String Pweight,String BG,String Med,String cont,String Pid) {
+    public boolean information_update(String Pname, String DateOfBirth, String Psex,String Pweight,String BG,String Med,String cont,String Pid, String Symptoms, String History) {
         try {
             con.close();
         } catch (SQLException e) {
@@ -199,7 +202,7 @@ public class Model_sqlite {
         PreparedStatement pst;
         try {
             System.out.println("Line 1");
-            pst = con.prepareStatement("UPDATE Patient_info SET Name=?,BirthDate=?,Sex=?,Weight=?,BloodGroup=?,Medication=?,Contact=? WHERE PatientID=?");
+            pst = con.prepareStatement("UPDATE Patient_info SET Name=?,BirthDate=?,Sex=?,Weight=?,BloodGroup=?,Medication=?,Contact=?,Symptoms=?, MedicalHistory=? WHERE PatientID=?");
             pst.setString(1, Pname);
             pst.setString(2, DateOfBirth);
             pst.setString(3, Psex);
@@ -208,6 +211,9 @@ public class Model_sqlite {
             pst.setString(6, Med);
             pst.setString(7, cont);
             pst.setString(8,Pid);
+            pst.setString(9, Symptoms);
+            pst.setString(10, History);
+
             System.out.println("line 2");
 
             int status = pst.executeUpdate();
@@ -348,7 +354,7 @@ public class Model_sqlite {
             {
                 patient = new Patient(resultSet.getString("Name"), resultSet.getString("BirthDate"),resultSet.getString("PatientID"),
                         resultSet.getString("Sex"), resultSet.getString("Weight"),
-                        resultSet.getString("Contact"), resultSet.getString("BloodGroup"), resultSet.getString("Medication"));
+                        resultSet.getString("Contact"), resultSet.getString("BloodGroup"), resultSet.getString("Medication"), resultSet.getString("Symptoms"), resultSet.getString("MedicalHistory"));
 
                         return true;
 
