@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.clinic.viewController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView accessibleRole="BUTTON" fitHeight="400.0" fitWidth="607.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/C:/Users/User/IdeaProjects/HelloWorldJavaFX/src/images/rm208-340-kwan_1.jpg" />
+               </image>
+            </ImageView>
+            <Text layoutX="28.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Information" wrappingWidth="229.86708068847656">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Label layoutX="28.0" layoutY="67.0" prefHeight="18.0" prefWidth="118.0" text="Name">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="102.0" prefHeight="18.0" prefWidth="118.0" text="Date of Birth">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="144.0" prefHeight="18.0" prefWidth="118.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="135.0" prefHeight="18.0" prefWidth="118.0" text="Sex">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="173.0" prefHeight="18.0" prefWidth="118.0" text="Weight">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="212.0" prefHeight="18.0" prefWidth="118.0" text="Blood Group">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="237.0" prefHeight="18.0" prefWidth="118.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="255.0" prefHeight="18.0" prefWidth="137.0" text="Current medication(s)">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="300.0" prefHeight="18.0" prefWidth="118.0" text="Contact no.">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="343.0" prefHeight="18.0" prefWidth="118.0" text="Patient ID">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="name" layoutX="91.0" layoutY="63.0" prefHeight="26.0" prefWidth="168.0" promptText="Patient's Name" />
+            <TextField fx:id="DoB" layoutX="117.0" layoutY="98.0" prefHeight="26.0" prefWidth="168.0" promptText="DD/MM/YYYY" />
+            <TextField fx:id="sex" layoutX="82.0" layoutY="131.0" prefHeight="26.0" prefWidth="86.0" promptText="Male/Female" />
+            <TextField fx:id="weight" layoutX="91.0" layoutY="169.0" prefHeight="26.0" prefWidth="53.0" promptText="kg" />
+            <TextField fx:id="blood_group" layoutX="117.0" layoutY="208.0" prefHeight="26.0" prefWidth="60.0" promptText="eg. B+" />
+            <TextField fx:id="medicine" layoutX="166.0" layoutY="251.0" prefHeight="26.0" prefWidth="269.0" promptText="Names of medications" />
+            <TextField fx:id="contact" layoutX="105.0" layoutY="296.0" prefHeight="26.0" prefWidth="168.0" promptText="01xxxxxxxxx" />
+            <TextField fx:id="id" layoutX="105.0" layoutY="339.0" prefHeight="26.0" prefWidth="168.0" />
+            <Button fx:id="back" layoutX="487.0" layoutY="43.0" mnemonicParsing="false" onAction="#goBack" opacity="0.68" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: #0137B5;" text="Go Back" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="update" layoutX="487.0" layoutY="334.0" mnemonicParsing="false" onAction="#Update" opacity="0.68" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: #0137B5;" text="Update" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label fx:id="updateLabel" layoutX="435.0" layoutY="287.0" prefHeight="30.0" prefWidth="167.0">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="201.0" layoutY="141.0" prefHeight="18.0" prefWidth="86.0" text="Symptoms">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="history" layoutX="311.0" layoutY="174.0" prefHeight="26.0" prefWidth="269.0" promptText="Severe illnesses, allergies, prior procedures" />
+            <Label layoutX="201.0" layoutY="178.0" prefHeight="18.0" prefWidth="102.0" text="Medical History">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="symptoms" layoutX="311.0" layoutY="137.0" prefHeight="26.0" prefWidth="269.0" promptText="Symptoms in brief" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
