@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cfa0edcd-ce2f-49a1-bebd-ffb566727709" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/.gradle/7.3.1/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/.gradle/7.3.1/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/.gradle/7.3.1/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/.gradle/7.3.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/.gradle/7.3.1/dependencies-accessors/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/.gradle/7.3.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/.gradle/7.3.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/.gradle/7.3.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/.gradle/7.3.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/.gradle/7.3.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/.gradle/7.3.1/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/.gradle/7.3.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/.gradle/file-system.probe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/Clinic.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/Project_database.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/build/classes/java/main/com/example/clinic/AfterLoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/build/classes/java/main/com/example/clinic/Info_addedController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/build/classes/java/main/com/example/clinic/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/build/classes/java/main/com/example/clinic/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/build/classes/java/main/com/example/clinic/newPatientController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/build/classes/java/main/com/example/clinic/updatePatientController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/build/classes/java/main/database/Model_sqlite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/build/classes/java/main/database/sqlConnect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/build/classes/java/main/heirarchy/Doctor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/build/classes/java/main/heirarchy/Patient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/build/classes/java/main/heirarchy/People.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/build/classes/java/main/heirarchy/Staff.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/build/classes/java/main/heirarchy/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/build/classes/java/main/module-info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/build/libs/Clinic-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/build/resources/main/com/example/clinic/afterLogin.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/build/resources/main/com/example/clinic/info_added.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/build/resources/main/com/example/clinic/login.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/build/resources/main/com/example/clinic/newPatient.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/build/resources/main/com/example/clinic/update_patient.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/src/images/0x0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/src/images/0x0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/src/images/pexels-negative-space-48604.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/src/images/pexels-photo-48604.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/src/images/rm208-340-kwan_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/src/main/java/com/example/clinic/AfterLoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/src/main/java/com/example/clinic/Info_addedController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/src/main/java/com/example/clinic/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/src/main/java/com/example/clinic/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/src/main/java/com/example/clinic/newPatientController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/src/main/java/com/example/clinic/updatePatientController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/src/main/java/database/Model_sqlite.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/src/main/java/database/sqlConnect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/src/main/java/heirarchy/Doctor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/src/main/java/heirarchy/Patient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/src/main/java/heirarchy/People.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/src/main/java/heirarchy/Staff.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/src/main/java/heirarchy/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/src/main/resources/com/example/clinic/afterLogin.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/src/main/resources/com/example/clinic/info_added.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/src/main/resources/com/example/clinic/login.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/src/main/resources/com/example/clinic/newPatient.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clinic/src/main/resources/com/example/clinic/update_patient.fxml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="27fFEsbwmYA82pgrYWzeSZ1iGPj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cfa0edcd-ce2f-49a1-bebd-ffb566727709" name="Changes" comment="" />
+      <created>1649703131241</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1649703131241</updated>
+    </task>
+    <servers />
+  </component>
+</project>

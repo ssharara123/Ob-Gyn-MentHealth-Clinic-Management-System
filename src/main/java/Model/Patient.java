@@ -89,7 +89,7 @@ public class Patient extends People{
     public Patient (String id) throws SQLException {
         super.setType("PATIENT");
         //Model_sqlite x = new Model_sqlite();
-        //this.Id = id;
+        this.Id = id;
         //System.out.println(id);
        // super.setName(Model_sqlite.getNameForPatient(id));
        // super.setDateOfBirth(Model_sqlite.getDobForPatient(id));

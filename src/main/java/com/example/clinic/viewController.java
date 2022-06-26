@@ -35,6 +35,7 @@ public class viewController implements Initializable {
         private TextField contact;
         @FXML
         private TextField id;
+
         @FXML
         private Label updateLabel;
 
