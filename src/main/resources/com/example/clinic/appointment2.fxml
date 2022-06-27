@@ -14,7 +14,7 @@
          <children>
             <ImageView fitHeight="195.0" fitWidth="237.0" layoutX="202.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../images/paid-stamp-103887.png" />
+                  <Image url="@images/paid-stamp-103887.png" />
                </image>
             </ImageView>
             <Text layoutX="154.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Successfully Added!">
