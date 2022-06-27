@@ -187,6 +187,7 @@ public class Model_sqlite {
             return false;
 
         }
+
     }
     public boolean information_update(String Pname, String DateOfBirth, String Psex,String Pweight,String BG,String Med,String cont,String Pid, String Symptoms, String History) {
         try {
@@ -202,7 +203,7 @@ public class Model_sqlite {
         PreparedStatement pst;
         try {
             System.out.println("Line 1");
-            pst = con.prepareStatement("UPDATE Patient_info SET Name=?,BirthDate=?,Sex=?,Weight=?,BloodGroup=?,Medication=?,Contact=? WHERE PatientID=?");
+            pst = con.prepareStatement("UPDATE Patient_info SET Name=?,BirthDate=?,Sex=?,Weight=?,BloodGroup=?,Medication=?,Contact=?,MedicalHistory=?,Symptoms=? WHERE PatientID=?");
             pst.setString(1, Pname);
             pst.setString(2, DateOfBirth);
             pst.setString(3, Psex);
@@ -210,10 +211,9 @@ public class Model_sqlite {
             pst.setString(5, BG);
             pst.setString(6, Med);
             pst.setString(7, cont);
-            pst.setString(8,Pid);
-            /*pst.setString(9, Symptoms);
-            pst.setString(10, History);*/
-
+            pst.setString(8,History);
+            pst.setString(9, Symptoms);
+            pst.setString(10, Pid);
             System.out.println("line 2");
 
             int status = pst.executeUpdate();

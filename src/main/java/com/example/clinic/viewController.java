@@ -63,6 +63,9 @@ public class viewController implements Initializable {
         medicine.setText(Model_sqlite.getInstance().getPatient().getMedication());
         contact.setText(Model_sqlite.getInstance().getPatient().getContactNo());
         id.setText(Model_sqlite.getInstance().getPatient().getId());
+        history.setText(Model_sqlite.getInstance().getPatient().getHistory());
+        symptoms.setText(Model_sqlite.getInstance().getPatient().getSymptoms());
+
 
 
     }
@@ -80,6 +83,8 @@ public class viewController implements Initializable {
             patient.setDateOfBirth(DoB.getText());
             patient.setMedication(medicine.getText());
             patient.setId(id.getText());
+            patient.setHistory(history.getText());
+            patient.setSymptoms(symptoms.getText());
             if (model.information_update(patient.getName(),patient.getDateOfBirth(),patient.getSex(),patient.getWeight(),patient.getBloodGroup(),patient.getMedication(),patient.getContactNo(),patient.getId(), patient.getSymptoms(), patient.getHistory())) {
                 updateLabel.setText("Update Successful!");
             }

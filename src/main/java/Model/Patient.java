@@ -79,7 +79,7 @@ public class Patient extends People{
         Medication = medication;
     }
     public String getSymptoms(){return Symptoms;}
-    public void setSymptoms(String symptoms) {   System.out.println(symptoms);  Symptoms = symptoms; System.out.println(symptoms);}
+    public void setSymptoms(String symptoms) {   Symptoms = symptoms;}
     public String getHistory(){ return History; }
     public void setHistory(String history){ History = history;}
 

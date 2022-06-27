@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.clinic.DocListObGyn">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #CBE2F2;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="400.0" fitWidth="600.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../images/appointment2.jpg" />
+               </image>
+            </ImageView>
+            <Text layoutX="133.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Patient Information and then click Select to Select the Doctor " textAlignment="CENTER" wrappingWidth="362.60235595703125">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Text>
+            <TextField fx:id="Name" layoutX="278.0" layoutY="88.0" promptText="Name" />
+            <Text layoutX="95.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient's Name">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text layoutX="96.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient ID">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <TextField fx:id="ID" layoutX="278.0" layoutY="123.0" promptText="ID number" />
+            <TextField fx:id="Date" layoutX="278.0" layoutY="155.0" promptText="DD/MM/YYYY" />
+            <Text layoutX="95.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Date">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Button fx:id="back" layoutX="506.0" layoutY="351.0" mnemonicParsing="false" onAction="#goBack" prefHeight="34.0" prefWidth="82.0" style="-fx-background-color: #E1EDF9;" text="Go Back">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font>
+            </Button>
+            <Text layoutX="14.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dr. Maliha Ahsan" wrappingWidth="201.33673095703125">
+               <font>
+                  <Font name="Calibri" size="26.0" />
+               </font>
+            </Text>
+            <Text layoutX="215.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dr. Sneha Kamal" wrappingWidth="178.936767578125">
+               <font>
+                  <Font name="Calibri" size="26.0" />
+               </font>
+            </Text>
+            <Text layoutX="406.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dr. Dilara Zaman" wrappingWidth="178.936767578125">
+               <font>
+                  <Font name="Calibri" size="26.0" />
+               </font>
+            </Text>
+            <Text layoutX="13.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MBBS, FCPS Pt 1, FCPS Pt 2" wrappingWidth="193.33673095703125">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </Text>
+            <Text layoutX="20.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Visit Fee: bdt 800" wrappingWidth="134.93670654296875">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </Text>
+            <Button fx:id="maliha" layoutX="66.0" layoutY="289.0" mnemonicParsing="false" onAction="#chooseMaliha" style="-fx-background-color: #E2EFF8;" text="Select">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Text layoutX="222.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MBBS, MD (BSMMU)" wrappingWidth="164.53668212890625">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </Text>
+            <Text layoutX="224.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Visit Fee: bdt 1000" wrappingWidth="130.93670654296875">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </Text>
+            <Button fx:id="sneha" layoutX="271.0" layoutY="289.0" mnemonicParsing="false" onAction="#chooseSneha" style="-fx-background-color: #E2EFF8;" text="Select">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Text layoutX="411.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MBBS, MD (BSMMU)" wrappingWidth="154.13671875">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </Text>
+            <Text layoutX="411.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Visit Fee: bdt 1000" wrappingWidth="136.5367431640625">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </Text>
+            <Button fx:id="dilara" layoutX="459.0" layoutY="289.0" mnemonicParsing="false" onAction="#chooseDilara" style="-fx-background-color: #E2EFF8;" text="Select">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
