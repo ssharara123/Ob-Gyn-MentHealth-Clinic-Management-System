@@ -14,7 +14,7 @@
          <children>
             <ImageView fitHeight="340.0" fitWidth="600.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../images/appointment.jpg" />
+                  <Image url="@images/appointment.jpg" />
                </image>
             </ImageView>
             <Button fx:id="mentalhealth" layoutX="80.0" layoutY="119.0" mnemonicParsing="false" onAction="#docsMentalHealth" prefHeight="68.0" prefWidth="203.0" style="-fx-background-color: #10171D;" text="Mental Health" textFill="#dceff2">
