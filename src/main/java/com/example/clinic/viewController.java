@@ -43,7 +43,7 @@ public class viewController implements Initializable {
     public void goBack(ActionEvent event) throws IOException
     {
         Main q = new Main();
-        q.changeScene("doctor.fxml");
+        q.changeScene("searchPatient.fxml");
     }
 
 
