@@ -36,7 +36,7 @@ public class staffController {
 
     public void appointment(ActionEvent event) throws IOException {
         Main n = new Main();
-        n.changeScene("appointment.fxml");
+        n.changeScene("appointment1.fxml");
     }
 
 }
