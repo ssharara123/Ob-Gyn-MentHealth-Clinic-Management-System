@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #CBE2F2;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.clinic.AppointmentListController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="341.0" fitWidth="606.0" layoutX="1.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../images/appointment.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="name2" layoutX="42.0" layoutY="98.0" prefHeight="22.0" prefWidth="119.0" />
+                  <Label fx:id="name3" layoutX="43.0" layoutY="129.0" prefHeight="16.0" prefWidth="138.0" />
+                  <Label fx:id="name5" layoutX="43.0" layoutY="172.0" prefHeight="38.0" prefWidth="162.0" />
+                  <Label fx:id="name4" layoutX="43.0" layoutY="156.0" prefHeight="17.0" prefWidth="162.0" />
+                  <Label fx:id="name6" layoutX="42.0" layoutY="205.0" prefHeight="32.0" prefWidth="162.0" />
+                  <Label fx:id="name7" layoutX="43.0" layoutY="232.0" prefHeight="30.0" prefWidth="162.0" />
+                  <Label fx:id="name8" layoutX="42.0" layoutY="255.0" prefHeight="34.0" prefWidth="162.0" />
+                  <Label fx:id="name9" layoutX="42.0" layoutY="287.0" prefHeight="22.0" prefWidth="162.0" />
+                  <Label fx:id="name10" layoutX="43.0" layoutY="309.0" prefHeight="25.0" prefWidth="162.0" />
+                  <Label fx:id="name1" layoutX="42.0" layoutY="65.0" prefHeight="32.0" prefWidth="125.0" />
+                  <Text layoutX="30.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient's Name">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="date2" layoutX="171.0" layoutY="98.0" prefHeight="22.0" prefWidth="162.0" />
+                  <Label fx:id="date3" layoutX="172.0" layoutY="129.0" prefHeight="16.0" prefWidth="138.0" />
+                  <Label fx:id="date5" layoutX="172.0" layoutY="172.0" prefHeight="38.0" prefWidth="162.0" />
+                  <Label fx:id="date4" layoutX="172.0" layoutY="156.0" prefHeight="17.0" prefWidth="162.0" />
+                  <Label fx:id="date6" layoutX="171.0" layoutY="205.0" prefHeight="32.0" prefWidth="162.0" />
+                  <Label fx:id="date7" layoutX="172.0" layoutY="232.0" prefHeight="30.0" prefWidth="162.0" />
+                  <Label fx:id="date8" layoutX="171.0" layoutY="255.0" prefHeight="34.0" prefWidth="162.0" />
+                  <Label fx:id="date9" layoutX="171.0" layoutY="287.0" prefHeight="22.0" prefWidth="162.0" />
+                  <Label fx:id="date10" layoutX="172.0" layoutY="309.0" prefHeight="25.0" prefWidth="162.0" />
+                  <Label fx:id="date1" layoutX="171.0" layoutY="65.0" prefHeight="32.0" prefWidth="131.0" />
+                  <Text layoutX="158.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Date">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="ID2" layoutX="310.0" layoutY="98.0" prefHeight="22.0" prefWidth="162.0" />
+                  <Label fx:id="ID3" layoutX="311.0" layoutY="129.0" prefHeight="16.0" prefWidth="138.0" />
+                  <Label fx:id="ID5" layoutX="311.0" layoutY="172.0" prefHeight="38.0" prefWidth="162.0" />
+                  <Label fx:id="ID4" layoutX="311.0" layoutY="156.0" prefHeight="17.0" prefWidth="162.0" />
+                  <Label fx:id="ID6" layoutX="310.0" layoutY="205.0" prefHeight="32.0" prefWidth="162.0" />
+                  <Label fx:id="ID7" layoutX="311.0" layoutY="232.0" prefHeight="30.0" prefWidth="162.0" />
+                  <Label fx:id="ID8" layoutX="310.0" layoutY="255.0" prefHeight="34.0" prefWidth="162.0" />
+                  <Label fx:id="ID9" layoutX="310.0" layoutY="287.0" prefHeight="22.0" prefWidth="162.0" />
+                  <Label fx:id="ID10" layoutX="311.0" layoutY="309.0" prefHeight="25.0" prefWidth="162.0" />
+                  <Label fx:id="ID1" layoutX="310.0" layoutY="65.0" prefHeight="32.0" prefWidth="162.0" />
+                  <Text layoutX="311.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="back" layoutX="496.0" layoutY="347.0" mnemonicParsing="false" onAction="#goBack" prefHeight="34.0" prefWidth="82.0" style="-fx-background-color: #E1EDF9;" text="Go Back">
+                     <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="dismiss" layoutX="398.0" layoutY="137.0" mnemonicParsing="false" onAction="#dismissApp" prefHeight="69.0" prefWidth="195.0" style="-fx-background-color: #E1EDF9;" text="Dismiss an Appointment">
+                     <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
