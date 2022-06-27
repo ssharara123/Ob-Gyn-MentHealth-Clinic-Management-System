@@ -187,6 +187,23 @@ public class Model_sqlite {
             return false;
 
         }
+        finally
+        {
+            try {
+                //pst.close();
+                con.close();
+                //System.out.println("Yes in update database");
+            }
+            catch (SQLException e) {
+                e.printStackTrace();
+            }
+            catch (NullPointerException e) {
+                System.out.println(e);
+            }
+            catch(Exception e) {
+                System.out.println(e);
+            }
+        }
 
     }
     public boolean information_update(String Pname, String DateOfBirth, String Psex,String Pweight,String BG,String Med,String cont,String Pid, String Symptoms, String History) {
@@ -258,7 +275,59 @@ public class Model_sqlite {
             }
         }
     }
+public boolean appointmentAdd(String name, String id, String date,String Query)
+{
+    con = sqlConnect.connector();
+    if (con == null) {
+        System.out.println("connection not successful");
+        System.exit(1);
+    }
+    PreparedStatement pst;
+    try {
+        System.out.println("inside try");
+        System.out.println(name+" "+id+" "+date);
+        pst = con.prepareStatement(Query);
+        pst.setString(1, name);
+        pst.setString(2, id);
+        pst.setString(3, date);
+        System.out.println("before execute");
+        int status = pst.executeUpdate();
+        System.out.println("after execute");
+        if (status == 1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    } catch (SQLException e) {
 
+        e.printStackTrace();
+        System.out.println("bhejaal in appointment");
+        return false;
+
+    }
+    finally
+    {
+        try {
+            //pst.close();
+            con.close();
+            //System.out.println("Yes in update database");
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+        catch (NullPointerException e) {
+            System.out.println(e);
+        }
+        catch(Exception e) {
+            System.out.println(e);
+        }
+    }
+
+
+}
 
     public static String getNameForStaff(String username) throws SQLException {
         /*ResultSet rs = null;

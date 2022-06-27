@@ -13,6 +13,7 @@ public class Patient extends People{
     private String Diagnosis;
     private String Symptoms;
     private String History;
+    private String AppointDate;
 
 
     public Patient(String name, String dateOfBirth,String Id, String Sex, String Weight, String ContactNo, String BloodGroup,String Medication, String Symptoms, String History)
@@ -82,6 +83,15 @@ public class Patient extends People{
     public void setSymptoms(String symptoms) {   Symptoms = symptoms;}
     public String getHistory(){ return History; }
     public void setHistory(String history){ History = history;}
+    public void setAppointmentDate(String appointmentDate)
+    {
+        AppointDate=appointmentDate;
+    }
+    public String getAppointmentDate()
+    {
+        return AppointDate;
+    }
+
 
 
 

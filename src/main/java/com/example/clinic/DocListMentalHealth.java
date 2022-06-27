@@ -1,5 +1,7 @@
 package com.example.clinic;
 
+import Model.Patient;
+import database.Model_sqlite;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -8,6 +10,7 @@ import javafx.scene.control.TextField;
 import java.io.IOException;
 
 public class DocListMentalHealth {
+
     @FXML
     private Button fatema;
     @FXML
@@ -23,18 +26,46 @@ public class DocListMentalHealth {
     @FXML
     private TextField Date;
 
+
+
     public void chooseFatema(ActionEvent event) throws IOException
     {
         // Dr. Fatema Kabir er table e patient entry add korbi
-        Main o = new Main();
-        o.changeScene("appointment2.fxml");
+        try {
+            Main o = new Main();
+            Model_sqlite model = new Model_sqlite();
+            Patient patient=new Patient();
+            patient.setName(Name.getText());
+            patient.setId(ID.getText());
+            patient.setAppointmentDate(Date.getText());
+            String Query = "insert into Fatema_Kabir(PatientName,PatientID,AppointmentDate) values(?,?,?)";
+            if (model.appointmentAdd(patient.getName(), patient.getId(), patient.getAppointmentDate(), Query)) {
+                o.changeScene("appointment2.fxml");
+            }
+        }
+        catch(Exception e)
+        {
+            System.out.println("Hoynai");
+        }
     }
     public void chooseFaisal(ActionEvent event) throws IOException
     {
-        // Dr. Faisal Khan er table e patient entry add korbi
-        Main o = new Main();
-        o.changeScene("appointment2.fxml");
-    }
+        try {
+            Main o = new Main();
+            Model_sqlite model = new Model_sqlite();
+            Patient patient=new Patient();
+            patient.setName(Name.getText());
+            patient.setId(ID.getText());
+            patient.setAppointmentDate(Date.getText());
+            String Query = "insert into Faisal_Khan(PatientName,PatientID,AppointmentDate) values(?,?,?)";
+            if (model.appointmentAdd(patient.getName(), patient.getId(), patient.getAppointmentDate(), Query)) {
+                o.changeScene("appointment2.fxml");
+            }
+        }
+        catch(Exception e)
+        {
+            System.out.println("Hoynai");
+        }    }
 
     public void chooseRehnuma(ActionEvent event) throws IOException
     {
