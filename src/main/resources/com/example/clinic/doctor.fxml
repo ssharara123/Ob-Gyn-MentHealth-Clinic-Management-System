@@ -31,8 +31,8 @@
             <Font name="Arial Rounded MT Bold" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="doctorName" layoutX="28.0" layoutY="65.0" prefHeight="75.0" prefWidth="186.0" />
-      <TextField fx:id="DoctorDegree" layoutX="29.0" layoutY="180.0" prefHeight="40.0" prefWidth="193.0" />
-      <TextField fx:id="department" layoutX="29.0" layoutY="241.0" />
+      <TextField fx:id="doctorName" editable="false" layoutX="28.0" layoutY="65.0" prefHeight="75.0" prefWidth="186.0" />
+      <TextField fx:id="DoctorDegree" editable="false" layoutX="29.0" layoutY="180.0" prefHeight="40.0" prefWidth="193.0" />
+      <TextField fx:id="department" editable="false" layoutX="29.0" layoutY="241.0" />
    </children>
 </AnchorPane>

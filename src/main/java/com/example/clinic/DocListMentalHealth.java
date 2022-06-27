@@ -5,11 +5,12 @@ import com.example.database.Model_sqlite;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
 
-public class DocListMentalHealth {
+public class DocListMentalHealth extends Main {
 
     @FXML
     private Button fatema;
@@ -30,18 +31,22 @@ public class DocListMentalHealth {
 
     public void chooseFatema(ActionEvent event) throws IOException
     {
-        // Dr. Fatema Kabir er table e patient entry add korbi
         try {
-            Main o = new Main();
+
             Model_sqlite model = new Model_sqlite();
             Patient patient=new Patient();
             patient.setName(Name.getText());
             patient.setId(ID.getText());
             patient.setAppointmentDate(Date.getText());
             String Query = "insert into Fatema_Kabir(PatientName,PatientID,AppointmentDate) values(?,?,?)";
-            if (model.appointmentAdd(patient.getName(), patient.getId(), patient.getAppointmentDate(), Query)) {
-                o.changeScene("appointment2.fxml");
+
+                if (model.appointmentAdd(patient.getName(), patient.getId(), patient.getAppointmentDate(), Query)) {
+                super.changeScene("appointment2.fxml");
             }
+
+
+
+
         }
         catch(Exception e)
         {
@@ -51,7 +56,6 @@ public class DocListMentalHealth {
     public void chooseFaisal(ActionEvent event) throws IOException
     {
         try {
-            Main o = new Main();
             Model_sqlite model = new Model_sqlite();
             Patient patient=new Patient();
             patient.setName(Name.getText());
@@ -59,7 +63,7 @@ public class DocListMentalHealth {
             patient.setAppointmentDate(Date.getText());
             String Query = "insert into Faisal_Khan(PatientName,PatientID,AppointmentDate) values(?,?,?)";
             if (model.appointmentAdd(patient.getName(), patient.getId(), patient.getAppointmentDate(), Query)) {
-                o.changeScene("appointment2.fxml");
+                super.changeScene("appointment2.fxml");
             }
         }
         catch(Exception e)
@@ -69,14 +73,11 @@ public class DocListMentalHealth {
 
     public void chooseRehnuma(ActionEvent event) throws IOException
     {
-        // Dr. Rehnuma Bushra er table e patient entry add korbi
-        Main o = new Main();
-        o.changeScene("appointment2.fxml");
+        super.changeScene("appointment2.fxml");
     }
 
     public void goBack(ActionEvent event) throws IOException
     {
-        Main o = new Main();
-        o.changeScene("appointment1.fxml");
+        super.changeScene("appointment1.fxml");
     }
 }

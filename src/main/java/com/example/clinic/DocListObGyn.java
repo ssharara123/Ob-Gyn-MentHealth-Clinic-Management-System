@@ -7,7 +7,7 @@ import javafx.scene.control.TextField;
 
 import java.io.IOException;
 
-public class DocListObGyn
+public class DocListObGyn extends Main
 {
     @FXML
     private Button sneha;
@@ -26,28 +26,22 @@ public class DocListObGyn
 
     public void chooseSneha(ActionEvent event) throws IOException
     {
-        // Dr. Sneha Kamal er table e patient entry add korbi
-        Main o = new Main();
-        o.changeScene("appointment2.fxml");
+
+        super.changeScene("appointment2.fxml");
     }
     public void chooseMaliha(ActionEvent event) throws IOException
     {
-        // Dr. Maliha Ahsan er table e patient entry add korbi
-        Main o = new Main();
-        o.changeScene("appointment2.fxml");
+        super.changeScene("appointment2.fxml");
     }
 
     public void chooseDilara(ActionEvent event) throws IOException
     {
-        // Dr. Dilara Zaman er table e patient entry add korbi
-        Main o = new Main();
-        o.changeScene("appointment2.fxml");
+        super.changeScene("appointment2.fxml");
     }
 
     public void goBack(ActionEvent event) throws IOException
     {
-        Main o = new Main();
-        o.changeScene("appointment1.fxml");
+        super.changeScene("appointment1.fxml");
     }
 
 

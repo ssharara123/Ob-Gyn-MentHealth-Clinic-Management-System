@@ -9,7 +9,7 @@ import javafx.scene.control.TextField;
 
 import java.io.IOException;
 
-public class searchController {
+public class searchController extends Main{
     @FXML
     private Button searchbutton;
     @FXML
@@ -22,13 +22,13 @@ public class searchController {
     private Button back;
 
     public void search(ActionEvent e) {
-        Main q = new Main();
+
 
         if (Model_sqlite.getInstance().searchPatient(nameField.getText(), Idfield.getText())) {
 
             try
             {
-                q.changeScene("ViewPatient.fxml");
+                super.changeScene("ViewPatient.fxml");
 
             } catch (IOException ex) {
                 ex.printStackTrace();
@@ -44,14 +44,14 @@ public class searchController {
 
     public void back(ActionEvent event) throws IOException
     {
-        Main k = new Main();
+
         LoginController x = new LoginController();
 
        if(Model_sqlite.getInstance().get_type().equals("Staff"))
-       { k.changeScene("afterLogin.fxml");}
+       { super.changeScene("afterLogin.fxml");}
 
         else if(Model_sqlite.getInstance().get_type().equals("Doctor"))
-        { k.changeScene("doctor.fxml");}
+        { super.changeScene("doctor.fxml");}
     }
 }
 

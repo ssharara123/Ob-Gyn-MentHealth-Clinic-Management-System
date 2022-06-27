@@ -10,7 +10,7 @@ import javafx.scene.control.TextField;
 
 import java.io.IOException;
 
-public class newPatientController
+public class newPatientController extends Main
 {
     @FXML
     private Button back;
@@ -43,14 +43,12 @@ public class newPatientController
 
     public void goBack(ActionEvent event) throws IOException
     {
-        Main q = new Main();
-        q.changeScene("afterLogin.fxml");
+        super.changeScene("afterLogin.fxml");
     }
 
     public void newConfirm(ActionEvent event) throws IOException {
 
         Model_sqlite model = new Model_sqlite();
-        Main r = new Main();
         try {
             Patient patient=new Patient(id.getText());
             patient.setName(name.getText());
@@ -63,10 +61,9 @@ public class newPatientController
             System.out.println(symptoms.getText());
             patient.setSymptoms(symptoms.getText());
             patient.setHistory(history.getText());
-            System.out.println("fckjsbsncbs");
 
             if (model.information_add(patient.getName(),patient.getDateOfBirth(),patient.getSex(),patient.getWeight(),patient.getBloodGroup(),patient.getMedication(),patient.getContactNo(),patient.getId(), patient.getSymptoms(), patient.getHistory())) {
-                System.out.println("fckjsbsncbs");
+
                 info_added.setText("Information Added!");
 
             }

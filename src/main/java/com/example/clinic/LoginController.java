@@ -7,7 +7,7 @@ import javafx.event.ActionEvent;
 import java.io.IOException;
 import com.example.database.Model_sqlite;
 
-public class LoginController
+public class LoginController extends Main
 {
     public int check;
     public LoginController()
@@ -40,7 +40,6 @@ public class LoginController
 
 
     public void checkLogin() throws IOException {
-        Main n = new Main();
         if (staff.isSelected()) {
             String query = "select * from user_info where Username = ? and Password = ?";
             try {
@@ -52,7 +51,7 @@ public class LoginController
                     Model_sqlite.getInstance().set_type("Staff");
                    Model_sqlite.getInstance().set_staff(staff);
 
-                    n.changeScene("afterLogin.fxml");
+                    super.changeScene("afterLogin.fxml");
 
 
                 }
@@ -73,7 +72,7 @@ public class LoginController
                     Model_sqlite.getInstance().set_type("Doctor");
                     //Model_sqlite.getInstance().set_doctor(doctor);
                     //wrongLogin.setText("Login Successful!");
-                    n.changeScene("doctor.fxml");
+                    super.changeScene("doctor.fxml");
 
 
                 } else {
@@ -92,12 +91,6 @@ public class LoginController
 
         }
 
-
-    public void Return (ActionEvent event) throws IOException
-    {
-        Main q = new Main();
-        q.changeScene("welcome.fxml");
-    }
 
     }
 

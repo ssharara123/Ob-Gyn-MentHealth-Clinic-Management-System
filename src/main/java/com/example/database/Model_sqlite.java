@@ -3,12 +3,8 @@ import com.example.Model.Doctor;
 import com.example.Model.Patient;
 import com.example.Model.Staff;
 import javafx.collections.ObservableList;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.sql.*;
-import java.util.Observable;
 
 
 public class Model_sqlite {
@@ -118,10 +114,10 @@ public class Model_sqlite {
             }
         }
     }
-    public void loadDate(ObservableList<Patient> patientList,String query) throws SQLException {
+    public void loadData(ObservableList<Patient> patientList,String query) throws SQLException {
+        Connection connection = sqlConnect.connector();
         try {
 
-            Connection connection = sqlConnect.connector();
             ResultSet rs = connection.createStatement().executeQuery(query);
             while (rs.next()) {
                 patientList.add(new Patient(rs.getString("PatientName"), rs.getString("PatientID"), rs.getString("AppointmentDate")));
@@ -131,7 +127,55 @@ public class Model_sqlite {
         } catch (SQLException e) {
             System.out.println("ERROR");
         }
+        finally
+        {
+            try {
+                //pst.close();
+                connection .close();
+                //System.out.println("Yes in update com.example.database");
+            }
+            catch (SQLException e) {
+                e.printStackTrace();
+            }
+            catch (NullPointerException e) {
+                System.out.println(e);
+            }
+            catch(Exception e) {
+                System.out.println(e);
+            }
+        }
+
+
     }
+    public static boolean deleteData(String Query, String pid) {
+
+        Connection connection=sqlConnect.connector();
+        PreparedStatement preparedStatement;
+        try {
+            preparedStatement = conection.prepareStatement(Query);
+            preparedStatement.setString(1, pid);
+           int status= preparedStatement.executeUpdate();
+           if(status==1)
+           {
+               return true;
+           }
+           else
+           {
+               return false;
+           }
+        } catch (SQLException | NullPointerException exception) {
+            System.out.println(exception.getMessage());
+            return false;
+        } finally {
+            try {
+                //preparedStatement.close();
+                conection.close();
+            } catch (SQLException | NullPointerException exception) {
+                System.out.println(exception.getMessage());
+            }
+        }
+    }
+
 
 
     public boolean information_add(String Pname, String DateOfBirth, String Psex,String Pweight,String BG,String Med,String cont,String Pid,String history, String symp) {

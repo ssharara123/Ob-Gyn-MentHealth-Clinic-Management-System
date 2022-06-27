@@ -11,13 +11,13 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Appointment2 {
+public class Appointment2 extends Main{
     @FXML
     private Button home;
 
     public void goHome(ActionEvent event) throws IOException
     {
-        Main o = new Main();
-        o.changeScene("afterLogin.fxml");
+
+        super.changeScene("afterLogin.fxml");
     }
 }

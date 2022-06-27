@@ -32,6 +32,7 @@
                   <Font size="21.0" />
                </font>
             </Button>
+            <Button fx:id="back" layoutX="229.0" layoutY="344.0" mnemonicParsing="false" onAction="#Back" prefHeight="40.0" prefWidth="97.0" text="Back" />
          </children>
       </AnchorPane>
    </center>

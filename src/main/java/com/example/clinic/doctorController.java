@@ -12,7 +12,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class doctorController implements Initializable {
+public class doctorController extends Main implements Initializable {
    
     @FXML
     private Button check;
@@ -38,22 +38,20 @@ public class doctorController implements Initializable {
     }
     public void check(ActionEvent e) throws IOException
     {
-        Main t=new Main();
-        t.changeScene("tableview.fxml");
+
+        super.changeScene("tableview.fxml");
     }
 
 
 
     public void logout(ActionEvent event) throws IOException
     {
-        Main x = new Main();
-        x.changeScene("login.fxml");
+        super.changeScene("login.fxml");
     }
 
     public void update(ActionEvent event) throws IOException
     {
-        Main k = new Main();
-        k.changeScene("searchPatient.fxml");
+        super.changeScene("searchPatient.fxml");
     }
 
 }

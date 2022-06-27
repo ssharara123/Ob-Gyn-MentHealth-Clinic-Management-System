@@ -7,15 +7,14 @@ import javafx.scene.control.Label;
 
 import java.io.IOException;
 
-public class Info_addedController {
+public class Info_addedController extends Main {
     @FXML
     private Button back;
     @FXML
     private Label add_info;
     public void go_back(ActionEvent event) throws IOException
     {
-        Main t = new Main();
-        t.changeScene("afterLogin.fxml");
+        super.changeScene("afterLogin.fxml");
     }
 
 }

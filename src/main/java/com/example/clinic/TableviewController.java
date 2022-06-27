@@ -9,6 +9,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TablePosition;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
@@ -18,9 +19,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.NoSuchElementException;
 import java.util.ResourceBundle;
 
-public class TableviewController implements Initializable {
+public class TableviewController extends Main implements Initializable {
     @FXML
     private TableView<Patient> patientTable;
     @FXML
@@ -67,8 +69,7 @@ public class TableviewController implements Initializable {
 
 
             }
-            System.out.println(Model_sqlite.getInstance().get_doctor().getName());
-            x.loadDate(patientList,query);
+            x.loadData(patientList,query);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -80,8 +81,53 @@ public class TableviewController implements Initializable {
     }
     public void back(ActionEvent e) throws IOException
     {
-        Main t=new Main();
-        t.changeScene("doctor.fxml");
+        super.changeScene("doctor.fxml");
     }
+    public void remove(ActionEvent e) throws IOException
+    {
+
+        ObservableList<Patient> allPatients,SinglePatient;
+        allPatients= patientTable.getItems();
+        SinglePatient=patientTable.getSelectionModel().getSelectedItems();
+        ObservableList selectedCells = patientTable.getSelectionModel().getSelectedCells();
+        TablePosition tablePosition = (TablePosition) selectedCells.get(0);
+        Object val = tablePosition.getTableColumn().getCellData(0);
+        switch (Model_sqlite.getInstance().get_doctor().getName())
+        {
+            case "Dr. Fatema Kabir":
+                query="DELETE FROM Fatema_Kabir WHERE PatientID=?";
+                break;
+            case "Dr. Maliha Ahsan":
+                query="DELETE FROM Maliha_Ahsan WHERE PatientID=?";
+                break;
+            case "Dr. Sneha Kamal":
+                query="DELETE FROM Sneha_Kamal WHERE PatientID=?";
+                break;
+            case "Dr. Dilara Zaman":
+                query="DELETE FROM Dilara_Zaman WHERE PatientID=?";
+                break;
+            case "Dr. Faisal Khan":
+                query="DELETE FROM Faisal_Khan WHERE PatientID=?";
+                break;
+            case "Dr. Rehnuma Bushra":
+                query="DELETE FROM Rehnuma_Bushra WHERE PatientID=?";
+                break;
+
+
+
+        }
+        try {
+            if(Model_sqlite.deleteData(query,val.toString()));
+            {
+                SinglePatient.forEach(allPatients::remove);
+            }
+
+        } catch(NoSuchElementException ex)
+        {
+            System.out.println("Nothing to show");
+        }
+
+    }
+
 
 }

@@ -14,7 +14,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class viewController implements Initializable {
+public class viewController extends Main implements Initializable {
         @FXML
         private Button back;
         @FXML
@@ -46,8 +46,7 @@ public class viewController implements Initializable {
 
     public void goBack(ActionEvent event) throws IOException
     {
-        Main q = new Main();
-        q.changeScene("searchPatient.fxml");
+        super.changeScene("searchPatient.fxml");
     }
 
 
@@ -72,7 +71,6 @@ public class viewController implements Initializable {
     public void Update(ActionEvent event) throws IOException {
 
         Model_sqlite model = new Model_sqlite();
-        //Main r = new Main();
         try {
             Patient patient=new Patient();
             patient.setName(name.getText());
