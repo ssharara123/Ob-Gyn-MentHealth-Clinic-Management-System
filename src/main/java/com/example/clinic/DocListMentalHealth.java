@@ -1,7 +1,7 @@
 package com.example.clinic;
 
-import Model.Patient;
-import database.Model_sqlite;
+import com.example.Model.Patient;
+import com.example.database.Model_sqlite;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -65,27 +65,13 @@ public class DocListMentalHealth {
         catch(Exception e)
         {
             System.out.println("Hoynai");
-        }
-    }
+        }    }
 
     public void chooseRehnuma(ActionEvent event) throws IOException
     {
-        try {
-            Main o = new Main();
-            Model_sqlite model = new Model_sqlite();
-            Patient patient=new Patient();
-            patient.setName(Name.getText());
-            patient.setId(ID.getText());
-            patient.setAppointmentDate(Date.getText());
-            String Query = "insert into Rehnuma_Bushra(PatientName,PatientID,AppointmentDate) values(?,?,?)";
-            if (model.appointmentAdd(patient.getName(), patient.getId(), patient.getAppointmentDate(), Query)) {
-                o.changeScene("appointment2.fxml");
-            }
-        }
-        catch(Exception e)
-        {
-            System.out.println("Hoynai");
-        }
+        // Dr. Rehnuma Bushra er table e patient entry add korbi
+        Main o = new Main();
+        o.changeScene("appointment2.fxml");
     }
 
     public void goBack(ActionEvent event) throws IOException

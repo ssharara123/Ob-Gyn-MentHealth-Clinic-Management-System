@@ -1,7 +1,7 @@
 package com.example.clinic;
 
-import database.Model_sqlite;
-import Model.Patient;
+import com.example.database.Model_sqlite;
+import com.example.Model.Patient;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -35,7 +35,7 @@ public class updatePatientController {
         String query="select * from Patient_info where Name = ? and PatientID = ?";
         try {
             Patient oldPatient=new Patient(p_id.getText());
-            if (patient_model.is_login(oldPatient.getName(), oldPatient.getId(),query)) {
+            if (patient_model.is_login(oldPatient.getName(), oldPatient.getId(),query,"Patient")) {
 
                 s.changeScene("afterLogin.fxml");
 

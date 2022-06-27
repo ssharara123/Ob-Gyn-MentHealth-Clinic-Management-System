@@ -1,12 +1,12 @@
 package com.example.clinic;
 
-import Model.Patient;
+import com.example.Model.Patient;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import database.Model_sqlite;
+import com.example.database.Model_sqlite;
 import javafx.event.ActionEvent;
 
 import java.io.IOException;

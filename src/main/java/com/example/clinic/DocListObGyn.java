@@ -1,7 +1,5 @@
 package com.example.clinic;
 
-import Model.Patient;
-import database.Model_sqlite;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -28,58 +26,22 @@ public class DocListObGyn
 
     public void chooseSneha(ActionEvent event) throws IOException
     {
-        try {
-            Main o = new Main();
-            Model_sqlite model = new Model_sqlite();
-            Patient patient=new Patient();
-            patient.setName(Name.getText());
-            patient.setId(ID.getText());
-            patient.setAppointmentDate(Date.getText());
-            String Query = "insert into Sneha_Kamal(PatientName,PatientID,AppointmentDate) values(?,?,?)";
-            if (model.appointmentAdd(patient.getName(), patient.getId(), patient.getAppointmentDate(), Query)) {
-                o.changeScene("appointment2.fxml");
-            }
-        }
-        catch(Exception e)
-        {
-            System.out.println("Hoynai");
-        }
+        // Dr. Sneha Kamal er table e patient entry add korbi
+        Main o = new Main();
+        o.changeScene("appointment2.fxml");
     }
-    public void chooseMaliha(ActionEvent event) throws IOException {
-        try {
-            Main o = new Main();
-            Model_sqlite model = new Model_sqlite();
-            Patient patient = new Patient();
-            patient.setName(Name.getText());
-            patient.setId(ID.getText());
-            patient.setAppointmentDate(Date.getText());
-            String Query = "insert into Maliha_Ahsan(PatientName,PatientID,AppointmentDate) values(?,?,?)";
-            if (model.appointmentAdd(patient.getName(), patient.getId(), patient.getAppointmentDate(), Query)) {
-                o.changeScene("appointment2.fxml");
-            }
-        } catch (Exception e) {
-            System.out.println("Hoynai");
-        }
+    public void chooseMaliha(ActionEvent event) throws IOException
+    {
+        // Dr. Maliha Ahsan er table e patient entry add korbi
+        Main o = new Main();
+        o.changeScene("appointment2.fxml");
     }
 
     public void chooseDilara(ActionEvent event) throws IOException
     {
-        try {
-            Main o = new Main();
-            Model_sqlite model = new Model_sqlite();
-            Patient patient=new Patient();
-            patient.setName(Name.getText());
-            patient.setId(ID.getText());
-            patient.setAppointmentDate(Date.getText());
-            String Query = "insert into Dilara_Zaman(PatientName,PatientID,AppointmentDate) values(?,?,?)";
-            if (model.appointmentAdd(patient.getName(), patient.getId(), patient.getAppointmentDate(), Query)) {
-                o.changeScene("appointment2.fxml");
-            }
-        }
-        catch(Exception e)
-        {
-            System.out.println("Hoynai");
-        }
+        // Dr. Dilara Zaman er table e patient entry add korbi
+        Main o = new Main();
+        o.changeScene("appointment2.fxml");
     }
 
     public void goBack(ActionEvent event) throws IOException

@@ -1,4 +1,4 @@
-package database;
+package com.example.database;
 import java.sql.*;
 
 public class sqlConnect {

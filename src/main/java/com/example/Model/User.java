@@ -1,4 +1,4 @@
-package Model;
+package com.example.Model;
 
 public abstract class User extends People {
     private String Username;

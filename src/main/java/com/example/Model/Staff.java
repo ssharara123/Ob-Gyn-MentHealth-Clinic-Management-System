@@ -1,6 +1,6 @@
-package Model;
+package com.example.Model;
 
-import database.Model_sqlite;
+import com.example.database.Model_sqlite;
 
 import java.sql.SQLException;
 

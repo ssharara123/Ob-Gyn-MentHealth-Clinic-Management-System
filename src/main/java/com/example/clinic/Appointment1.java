@@ -10,16 +10,9 @@ public class Appointment1
 {
     @FXML
     private Button mentalhealth;
-    @FXML
-    private Button back;
+
     @FXML
     private Button obGyn;
-
-    public void goBack(ActionEvent event) throws IOException
-    {
-        Main o = new Main();
-        o.changeScene("afterLogin.fxml");
-    }
 
     public void docsMentalHealth(ActionEvent event) throws IOException
     {

@@ -1,9 +1,14 @@
-package database;
-import Model.Doctor;
-import Model.Patient;
-import Model.Staff;
+package com.example.database;
+import com.example.Model.Doctor;
+import com.example.Model.Patient;
+import com.example.Model.Staff;
+import javafx.collections.ObservableList;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.sql.*;
+import java.util.Observable;
 
 
 public class Model_sqlite {
@@ -22,10 +27,7 @@ public class Model_sqlite {
     public static Connection conection;
     public static Connection con;
 
-    public Doctor get_doctor()
-    {
-        return doctor;
-    }
+
     public Staff get_staff()
     {
         return staff;
@@ -72,7 +74,7 @@ public class Model_sqlite {
             return false;
         }
     }
-    public boolean is_login(String Username,String Password,String Query)
+    public boolean is_login(String Username,String Password,String Query,String type)
     {
         conection = sqlConnect.connector();
         if (conection == null) {
@@ -89,6 +91,12 @@ public class Model_sqlite {
             resultSet = preparedStatement.executeQuery();
             if(resultSet.next())
             {
+                if(type.equals("Doctor"))
+                {
+                    System.out.println("Yes");
+                    doctor=new Doctor(resultSet.getString("Name"),resultSet.getString("Degree"),resultSet.getString("Department"));
+                    System.out.println(doctor.getName());
+                }
                 return true;
             }
             else
@@ -110,45 +118,20 @@ public class Model_sqlite {
             }
         }
     }
-
-    /*public boolean doc_login(String Username,String Password,String Query)
-    {
-        conection = sqlConnect.connector();
-        if (conection == null) {
-            System.out.println("connection not successful");
-            System.exit(1);
-        }
-        PreparedStatement preparedStatement = null;
-        ResultSet resultSet = null;
-
+    public void loadDate(ObservableList<Patient> patientList,String query) throws SQLException {
         try {
-            preparedStatement = conection.prepareStatement(Query);
-            preparedStatement.setString(1,Username);
-            preparedStatement.setString(2,Password);
-            resultSet = preparedStatement.executeQuery();
-            if(resultSet.next())
-            {
-                return true;
-            }
-            else
-            {
-                return false;
+
+            Connection connection = sqlConnect.connector();
+            ResultSet rs = connection.createStatement().executeQuery(query);
+            while (rs.next()) {
+                patientList.add(new Patient(rs.getString("PatientName"), rs.getString("PatientID"), rs.getString("AppointmentDate")));
+
+
             }
         } catch (SQLException e) {
-            e.printStackTrace();
-            return false;
+            System.out.println("ERROR");
         }
-        finally {
-            try {
-                preparedStatement.close();
-                resultSet.close();
-            }
-            catch (SQLException e)
-            {
-                e.printStackTrace();
-            }
-        }
-    } */
+    }
 
 
     public boolean information_add(String Pname, String DateOfBirth, String Psex,String Pweight,String BG,String Med,String cont,String Pid,String history, String symp) {
@@ -192,7 +175,7 @@ public class Model_sqlite {
             try {
                 //pst.close();
                 con.close();
-                //System.out.println("Yes in update database");
+                //System.out.println("Yes in update com.example.database");
             }
             catch (SQLException e) {
                 e.printStackTrace();
@@ -262,7 +245,7 @@ public class Model_sqlite {
             try {
                 //pst.close();
                 con.close();
-                //System.out.println("Yes in update database");
+                //System.out.println("Yes in update com.example.database");
             }
             catch (SQLException e) {
                 e.printStackTrace();
@@ -313,7 +296,7 @@ public boolean appointmentAdd(String name, String id, String date,String Query)
         try {
             //pst.close();
             con.close();
-            //System.out.println("Yes in update database");
+            //System.out.println("Yes in update com.example.database");
         }
         catch (SQLException e) {
             e.printStackTrace();
@@ -403,6 +386,10 @@ public boolean appointmentAdd(String name, String id, String date,String Query)
     public Patient getPatient()
     {
         return this.patient;
+    }
+    public Doctor get_doctor()
+    {
+        return this.doctor;
     }
     public boolean searchPatient(String patientName, String patientID)
     {

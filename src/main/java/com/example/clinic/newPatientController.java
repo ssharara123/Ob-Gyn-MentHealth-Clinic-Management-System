@@ -1,7 +1,7 @@
 package com.example.clinic;
 
-import database.Model_sqlite;
-import Model.Patient;
+import com.example.database.Model_sqlite;
+import com.example.Model.Patient;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

@@ -1,6 +1,6 @@
 package com.example.clinic;
 
-import database.Model_sqlite;
+import com.example.database.Model_sqlite;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -8,7 +8,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
-import java.sql.SQLException;
 
 public class searchController {
     @FXML

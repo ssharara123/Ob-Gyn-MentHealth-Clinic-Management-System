@@ -1,14 +1,23 @@
-package Model;
+package com.example.Model;
 
-import database.Model_sqlite;
+import com.example.database.Model_sqlite;
 
 import java.sql.SQLException;
 
 public class Doctor extends User{
     private String Department;   //OB-Gyn or MentalHealth
     private String Degree;
+    private String Name;
     private int VisitFee;
     public boolean check;
+    public String getName()
+    {
+        return Name;
+    }
+    public void setName(String name)
+    {
+        Name=name;
+    }
 
     public String getDepartment() {
         return Department;
@@ -40,4 +49,13 @@ public class Doctor extends User{
         super.setName(Model_sqlite.getNameForDoc(username));
         super.setDateOfBirth(Model_sqlite.getDobForDoc(username));
     }
+    public Doctor(String name,String degree,String department)
+    {
+        Name=name;
+        Degree=degree;
+        Department=department;
+
+
+    }
+
 }

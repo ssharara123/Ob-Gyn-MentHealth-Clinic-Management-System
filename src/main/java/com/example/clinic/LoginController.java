@@ -1,11 +1,11 @@
 package com.example.clinic;
-import Model.Doctor;
-import Model.Staff;
+import com.example.Model.Doctor;
+import com.example.Model.Staff;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 import java.io.IOException;
-import database.Model_sqlite;
+import com.example.database.Model_sqlite;
 
 public class LoginController
 {
@@ -40,13 +40,12 @@ public class LoginController
 
 
     public void checkLogin() throws IOException {
-        Model_sqlite login_model = new Model_sqlite();
         Main n = new Main();
         if (staff.isSelected()) {
             String query = "select * from user_info where Username = ? and Password = ?";
             try {
                 Staff staff = new Staff(Username.getText(), password.getText());
-                if (login_model.is_login(staff.getUsername(), staff.getPassword(), query)) {
+                if (Model_sqlite.getInstance().is_login(staff.getUsername(), staff.getPassword(), query,"Staff")) {
 
                     //wrongLogin.setText("Login Successful!");
                    check = 1;
@@ -67,11 +66,12 @@ public class LoginController
         } else if (doctor.isSelected()) {
             String query = "select * from doctor_info where Username = ? and Password = ?";
             try {
-                Doctor doctor = new Doctor(Username.getText(), password.getText());
-                if (login_model.is_login(doctor.getUsername(), doctor.getPassword(), query)) {
+                   Doctor doctor = new Doctor(Username.getText(), password.getText());
+
+                if (Model_sqlite.getInstance().is_login(doctor.getUsername(), doctor.getPassword(), query,"Doctor")) {
                     check = 2;
                     Model_sqlite.getInstance().set_type("Doctor");
-                    Model_sqlite.getInstance().set_doctor(doctor);
+                    //Model_sqlite.getInstance().set_doctor(doctor);
                     //wrongLogin.setText("Login Successful!");
                     n.changeScene("doctor.fxml");
 
@@ -92,12 +92,6 @@ public class LoginController
 
         }
 
-       public int get_x()
-       {
-           System.out.println(check);
-           return check;
-
-       }
 
     public void Return (ActionEvent event) throws IOException
     {

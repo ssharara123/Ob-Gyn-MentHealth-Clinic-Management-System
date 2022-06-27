@@ -1,4 +1,4 @@
-package Model;
+package com.example.Model;
 
 import java.sql.SQLException;
 
@@ -39,6 +39,13 @@ public class Patient extends People{
     {
 
     }
+    public Patient(String name,String id,String date)
+    {
+        setName(name);
+        Id=id;
+        AppointDate=date;
+    }
+
 
     public String getSex() {
         return Sex;

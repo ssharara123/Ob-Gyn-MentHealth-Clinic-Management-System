@@ -1,33 +1,48 @@
 package com.example.clinic;
 
+import com.example.database.Model_sqlite;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 
-public class doctorController {
-    @FXML
-    private Button view;
+public class doctorController implements Initializable {
+   
     @FXML
     private Button check;
     @FXML
     private Button back;
     @FXML
     private Button update;
-
-    public void checkAppointment(ActionEvent event) throws IOException
+    @FXML
+    private TextField doctorName;
+    @FXML
+    private TextField DoctorDegree;
+    @FXML
+    private TextField department;
+    @Override
+    public void initialize(URL location, ResourceBundle resources)
     {
-        Main t = new Main();
-        t.changeScene("appointmentList.fxml");
+        System.out.println(Model_sqlite.getInstance().get_doctor().getName());
+        doctorName.setText(Model_sqlite.getInstance().get_doctor().getName());
+        DoctorDegree.setText(Model_sqlite.getInstance().get_doctor().getDegree());
+        department.setText(Model_sqlite.getInstance().get_doctor().getDepartment());
+
+
+    }
+    public void check(ActionEvent e) throws IOException
+    {
+        Main t=new Main();
+        t.changeScene("tableview.fxml");
     }
 
-    public void view(ActionEvent event) throws IOException
-    {
-        Main t = new Main();
-        t.changeScene("searchPatient.fxml");
-    }
+
 
     public void logout(ActionEvent event) throws IOException
     {

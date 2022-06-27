@@ -14,7 +14,7 @@
          <children>
             <ImageView fitHeight="340.0" fitWidth="600.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../images/appointment.jpg" />
+                  <Image url="file:/C:/Users/User/IdeaProjects/copy/src/images/appointment.jpg" />
                </image>
             </ImageView>
             <Button fx:id="mentalhealth" layoutX="80.0" layoutY="119.0" mnemonicParsing="false" onAction="#docsMentalHealth" prefHeight="68.0" prefWidth="203.0" style="-fx-background-color: #10171D;" text="Mental Health" textFill="#dceff2">
@@ -30,11 +30,6 @@
             <Button fx:id="obGyn" layoutX="80.0" layoutY="237.0" mnemonicParsing="false" onAction="#docsObGyn" prefHeight="68.0" prefWidth="203.0" style="-fx-background-color: #10171D;" text="OB/Gyn" textFill="#dceff2">
                <font>
                   <Font size="21.0" />
-               </font>
-            </Button>
-            <Button fx:id="back" layoutX="462.0" layoutY="343.0" mnemonicParsing="false" onAction="#goBack" prefHeight="34.0" prefWidth="82.0" style="-fx-background-color: #E1EDF9;" text="Go Back">
-               <font>
-                  <Font name="Calibri Bold" size="16.0" />
                </font>
             </Button>
          </children>
