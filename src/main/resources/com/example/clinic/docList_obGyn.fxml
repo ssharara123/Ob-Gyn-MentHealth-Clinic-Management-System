@@ -15,7 +15,7 @@
          <children>
             <ImageView fitHeight="400.0" fitWidth="600.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../images/appointment2.jpg" />
+                  <Image url="@images/appointment2.jpg" />
                </image>
             </ImageView>
             <Text layoutX="133.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Patient Information and then click Select to Select the Doctor " textAlignment="CENTER" wrappingWidth="362.60235595703125">
