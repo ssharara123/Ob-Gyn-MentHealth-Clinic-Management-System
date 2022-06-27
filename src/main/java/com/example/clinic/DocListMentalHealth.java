@@ -65,13 +65,27 @@ public class DocListMentalHealth {
         catch(Exception e)
         {
             System.out.println("Hoynai");
-        }    }
+        }
+    }
 
     public void chooseRehnuma(ActionEvent event) throws IOException
     {
-        // Dr. Rehnuma Bushra er table e patient entry add korbi
-        Main o = new Main();
-        o.changeScene("appointment2.fxml");
+        try {
+            Main o = new Main();
+            Model_sqlite model = new Model_sqlite();
+            Patient patient=new Patient();
+            patient.setName(Name.getText());
+            patient.setId(ID.getText());
+            patient.setAppointmentDate(Date.getText());
+            String Query = "insert into Rehnuma_Bushra(PatientName,PatientID,AppointmentDate) values(?,?,?)";
+            if (model.appointmentAdd(patient.getName(), patient.getId(), patient.getAppointmentDate(), Query)) {
+                o.changeScene("appointment2.fxml");
+            }
+        }
+        catch(Exception e)
+        {
+            System.out.println("Hoynai");
+        }
     }
 
     public void goBack(ActionEvent event) throws IOException
